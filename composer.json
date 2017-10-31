@@ -1,0 +1,163 @@
+{
+    "name": "drupalcenter/dc8",
+    "description": "Drupalcenter with composer",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Steffen Rühlmann",
+            "email": "steffen@undpaul.de"
+        },
+        {
+            "name": "Stefan Borchert",
+            "email": "stefan@undpaul.de"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "name": "drupal/migrate_source_yaml",
+            "url": "https://git.drupal.org/sandbox/stborchert/2808617.git"
+        },
+        {
+            "type": "vcs",
+            "name": "drupal/views_lazy_load",
+            "url": "https://github.com/stborchert/views_lazy_load"
+        },
+        {
+            "type": "package",
+                "package": {
+                    "name": "ckeditor/codesnippet",
+                    "version": "4.6.2",
+                    "type": "drupal-library",
+                    "dist": {
+                        "url": "http://download.ckeditor.com/codesnippet/releases/codesnippet_4.6.2.zip",
+                        "type": "zip"
+                  },
+                  "require": {
+                      "composer/installers": "^1.2.0"
+                  }
+            }
+        },
+        {
+            "type": "package",
+                "package": {
+                    "name": "ckeditor/codetag",
+                    "version": "0.1.0",
+                    "type": "drupal-library",
+                    "dist": {
+                        "url": "http://download.ckeditor.com/codetag/releases/codetag_0.1_0.zip",
+                        "type": "zip"
+                  },
+                  "require": {
+                      "composer/installers": "^1.2.0"
+                  }
+            }
+        },
+        {
+            "type": "package",
+                "package": {
+                    "name": "harvesthq/chosen",
+                    "version": "1.6.1",
+                    "type": "drupal-library",
+                    "dist": {
+                        "url": "https://github.com/harvesthq/chosen/releases/download/v1.6.1/chosen_v1.6.1.zip",
+                        "type": "zip"
+                  },
+                  "require": {
+                      "composer/installers": "^1.2.0"
+                  }
+            }
+         }
+    ],
+    "require": {
+        "ckeditor/codesnippet": "^4.6",
+        "ckeditor/codetag": "^0.1.0",
+        "composer/installers": "^1.0",
+        "consolidation/robo": "~1",
+        "cweagans/composer-patches": "~1.0",
+        "drupal-composer/drupal-scaffold": "^2.2.0",
+        "drupal/admin_toolbar": "^1.0",
+        "drupal/allowed_formats": "dev-1.x",
+        "drupal/chosen": "dev-2.x",
+        "drupal/codesnippet": "dev-1.x",
+        "drupal/codetag": "dev-1.x",
+        "drupal/console": "~1.0",
+        "drupal/core": "^8.4",
+        "drupal/ctools": "dev-3.x",
+        "drupal/fac": "dev-1.x",
+        "drupal/field_group": "^1.0@RC",
+        "drupal/flag": "4.x-dev",
+        "drupal/focal_point": "^1.0@beta",
+        "drupal/inline_entity_form": "^1.0",
+        "drupal/media_entity": "1.6",
+        "drupal/media_entity_image": "^1.0",
+        "drupal/metatag": "^1.0",
+        "drupal/migrate_plus": "dev-3.x",
+        "drupal/migrate_source_yaml": "dev-8.x-1.x",
+        "drupal/migrate_tools": "dev-3.x",
+        "drupal/page_manager": "dev-4.x",
+        "drupal/panels": "dev-4.x",
+        "drupal/paragraphs": "^1.0",
+        "drupal/pathauto": "dev-1.x",
+        "drupal/search_api": "dev-1.x",
+        "drupal/search_api_solr": "dev-1.x",
+        "drupal/token": "^1.0",
+        "drupal/views_lazy_load": "dev-8.x-1.x",
+        "drush/drush": "8.1.11",
+        "harvesthq/chosen": "^1.6"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "dependency-cleanup": [
+            "DrupalProject\\composer\\ScriptHandler::dependencyCleanup"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::buildScaffold"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::buildScaffold"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "DrupalCenter\\Robo\\": "robo/"
+        },
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "docroot/libraries/{$name}": ["type:drupal-library"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "source": "http://cgit.drupalcode.org/drupal/plain/{path}?h={version}",
+            "excludes": [
+                "update.php"
+            ]
+        },
+        "enable-patching": true,
+        "patches": {
+        }
+    },
+    "config": {
+        "autoloader-suffix": "DrupalCenter",
+        "bin-dir": "bin/",
+        "secure-http": false,
+        "sort-packages": true
+    }
+}
