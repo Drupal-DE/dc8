@@ -19,6 +19,11 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "name": "burdamagazinorg/thunder-community",
+            "type": "vcs",
+            "url": "https://github.com/BurdaMagazinOrg/thunder-community.git"
+        },
+        {
             "type": "vcs",
             "name": "drupal/migrate_source_yaml",
             "url": "https://git.drupal.org/sandbox/stborchert/2808617.git"
@@ -75,6 +80,7 @@
          }
     ],
     "require": {
+        "burdamagazinorg/thunder-community": "dev-8.x-1.x",
         "ckeditor/codesnippet": "^4.6",
         "ckeditor/codetag": "^0.1.0",
         "composer/installers": "^1.0",
@@ -83,6 +89,7 @@
         "drupal-composer/drupal-scaffold": "^2.2.0",
         "drupal/admin_toolbar": "^1.0",
         "drupal/allowed_formats": "dev-1.x",
+        "drupal/block_visibility_groups": "^1.0",
         "drupal/chosen": "dev-2.x",
         "drupal/codesnippet": "dev-1.x",
         "drupal/codetag": "dev-1.x",
@@ -90,9 +97,9 @@
         "drupal/core": "^8.4",
         "drupal/ctools": "dev-3.x",
         "drupal/fac": "dev-1.x",
-        "drupal/field_group": "^1.0@RC",
-        "drupal/flag": "4.x-dev",
-        "drupal/focal_point": "^1.0@beta",
+        "drupal/field_group": "dev-1.x",
+        "drupal/flag": "dev-4.x",
+        "drupal/focal_point": "dev-1.x",
         "drupal/inline_entity_form": "^1.0",
         "drupal/media_entity": "1.6",
         "drupal/media_entity_image": "^1.0",
@@ -108,7 +115,7 @@
         "drupal/search_api_solr": "dev-1.x",
         "drupal/token": "^1.0",
         "drupal/views_lazy_load": "dev-8.x-1.x",
-        "drush/drush": "8.1.11",
+        "drush/drush": "8.1.15",
         "harvesthq/chosen": "^1.6"
     },
     "conflict": {
@@ -138,6 +145,7 @@
     },
     "extra": {
         "installer-paths": {
+            "docroot/modules/thunder-community": ["burdamagazinorg/thunder-community"],
             "docroot/core": ["type:drupal-core"],
             "docroot/modules/contrib/{$name}": ["type:drupal-module"],
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -152,6 +160,13 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/alinks": {
+                "Missing group annotation in AlinkPostRendererTest [#2875162]": "https://www.drupal.org/files/issues/fix-missing-group-2875162-1.patch"
+            },
+            "drupal/page_manager": {
+                "Warning: Missing argument 1 for PageVariantContextsForm::getContextClass() [#2799885]": "https://www.drupal.org/files/issues/2799885-page_manager-context_adding_fix.patch",
+                "Page Manager paths should support optional arguments as well [#2810329]": "https://www.drupal.org/files/issues/allow_optional_parameters-2810329-3.patch"
+            }
         }
     },
     "config": {
