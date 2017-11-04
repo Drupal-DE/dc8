@@ -5,6 +5,7 @@ bin
 docroot/core
 docroot/libraries
 docroot/modules/contrib
+docroot/modules/thunder-community
 docroot/themes/contrib
 
 # Ignore Drupal's file directory
