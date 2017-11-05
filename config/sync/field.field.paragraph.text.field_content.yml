@@ -1,0 +1,25 @@
+uuid: ffdb4486-e2cd-4e55-8b73-ea30de2d61be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.text
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: '0'
+id: paragraph.text.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: text
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

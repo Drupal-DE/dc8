@@ -1,0 +1,24 @@
+uuid: bdf06c4f-6ce5-4eca-b3b5-797975975d98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery.field_headline
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.default
+targetEntityType: paragraph
+bundle: gallery
+mode: default
+content:
+  field_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
