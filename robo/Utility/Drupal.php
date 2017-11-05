@@ -113,7 +113,7 @@ class Drupal {
       // Custom output capture to ensure no output at all.
       ob_start();
 
-      /** @var \Thunder\Robo\Utility\Drush $drush */
+      /** @var \DrupalCenter\Robo\Utility\Drush $drush */
       $drush = Robo::getContainer()->get('drush');
       $exec = $drush->exec()
         ->arg('php-eval')
@@ -163,7 +163,7 @@ class Drupal {
     ob_start();
 
     // Load Drupal core status via Drush.
-    /** @var \Thunder\Robo\Utility\Drush $drush */
+    /** @var \DrupalCenter\Robo\Utility\Drush $drush */
     $drush = Robo::getContainer()->get('drush');
     $output = $drush->exec()
       ->arg('pm-info')
@@ -204,7 +204,7 @@ class Drupal {
     ob_start();
 
     // Load Drupal core status via Drush.
-    /** @var \Thunder\Robo\Utility\Drush $drush */
+    /** @var \DrupalCenter\Robo\Utility\Drush $drush */
     $drush = Robo::getContainer()->get('drush');
     $output = $drush->exec()
       ->arg('core-status')

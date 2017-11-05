@@ -23,13 +23,13 @@ class RoboFileBase extends \Robo\Tasks implements BuilderAwareInterface {
   use BuilderAwareTrait;
   use IO;
 
-  use \Thunder\Robo\Task\DatabaseDump\loadTasks;
-  use \Thunder\Robo\Task\Drush\loadTasks;
-  use \Thunder\Robo\Task\FileSystem\loadTasks;
-  use \Thunder\Robo\Task\Npm\loadTasks;
-  use \Thunder\Robo\Task\Settings\loadTasks;
-  use \Thunder\Robo\Task\Site\loadTasks;
-  use \Thunder\Robo\Task\Environment\loadTasks;
+  use \DrupalCenter\Robo\Task\DatabaseDump\loadTasks;
+  use \DrupalCenter\Robo\Task\Drush\loadTasks;
+  use \DrupalCenter\Robo\Task\FileSystem\loadTasks;
+  use \DrupalCenter\Robo\Task\Npm\loadTasks;
+  use \DrupalCenter\Robo\Task\Settings\loadTasks;
+  use \DrupalCenter\Robo\Task\Site\loadTasks;
+  use \DrupalCenter\Robo\Task\Environment\loadTasks;
 
   /**
    * Constructor.
