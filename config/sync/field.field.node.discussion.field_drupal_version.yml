@@ -1,0 +1,29 @@
+uuid: ea4030ce-24cc-48a4-bb19-11c101a1e4f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drupal_version
+    - node.type.discussion
+    - taxonomy.vocabulary.drupal_version
+id: node.discussion.field_drupal_version
+field_name: field_drupal_version
+entity_type: node
+bundle: discussion
+label: 'Drupal version'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      drupal_version: drupal_version
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
