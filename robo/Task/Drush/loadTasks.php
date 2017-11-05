@@ -50,24 +50,6 @@ trait loadTasks {
   }
 
   /**
-   * Import configuration.
-   *
-   * @return ConfigImport
-   */
-  protected function taskDrushFoodConfigImport() {
-    return $this->task(FoodConfigImport::class);
-  }
-
-  /**
-   * Export configuration.
-   *
-   * @return ConfigExport
-   */
-  protected function taskDrushFoodConfigExport() {
-    return $this->task(FoodConfigExport::class);
-  }
-
-  /**
    * Enable extension(s).
    *
    * @param array $extensions
@@ -135,15 +117,6 @@ trait loadTasks {
    */
   protected function taskDrushUserLogin($user = 1) {
     return $this->task(UserLogin::class, $user);
-  }
-
-  /**
-   * Fix profile information in configuration.
-   *
-   * @return ConfigUpdateProfileHack
-   */
-  protected function taskDrushConfigUpdateProfileHack() {
-    return $this->task(ConfigUpdateProfileHack::class);
   }
 
 }

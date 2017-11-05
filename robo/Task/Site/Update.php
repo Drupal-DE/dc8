@@ -57,16 +57,14 @@ class Update extends BaseTask implements BuilderAwareInterface {
     $collection->addTaskList([
       // Clear all caches.
       'Update.cacheRebuild' => $this->collectionBuilder()->taskDrushCacheRebuild(),
-      // Update profile information.
-      'Update.drushConfigUpdateProfileHack' => $this->collectionBuilder()->taskDrushConfigUpdateProfileHack(),
       // Import configuration.
-      'Update.drushConfigImport' => $this->collectionBuilder()->taskDrushFoodConfigImport(),
+      'Update.drushConfigImport' => $this->collectionBuilder()->taskDrushConfigImport(),
       // Apply database updates.
       'Update.applyDatabaseUpdates' => $this->collectionBuilder()->taskDrushApplyDatabaseUpdates(),
       // Clear all caches (again).
       'Update.cacheRebuildAgain' => $this->collectionBuilder()->taskDrushCacheRebuild(),
       // Import configuration (again, to ensure no stale configuration updates).
-      'Update.drushConfigImportAgain' => $this->collectionBuilder()->taskDrushFoodConfigImport(),
+      'Update.drushConfigImportAgain' => $this->collectionBuilder()->taskDrushConfigImport(),
       // Apply entity schema updates.
       'Update.applyEntitySchemaUpdates' => $this->collectionBuilder()->taskDrushEntitySchemaUpdates(),
       // Clear all caches (again).
