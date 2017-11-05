@@ -114,6 +114,7 @@
         "drupal/search_api": "dev-1.x",
         "drupal/search_api_solr": "dev-1.x",
         "drupal/token": "^1.0",
+        "drupal/views_block_filter_block": "1.x-dev",
         "drupal/views_lazy_load": "dev-8.x-1.x",
         "drush/drush": "8.1.15",
         "harvesthq/chosen": "^1.6"
@@ -160,6 +161,9 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/core": {
+                "Canonical taxonomy term link for forum vocabulary is broken [#2010132]": "https://www.drupal.org/files/issues/2010132-104.patch"
+            },
             "drupal/alinks": {
                 "Missing group annotation in AlinkPostRendererTest [#2875162]": "https://www.drupal.org/files/issues/fix-missing-group-2875162-1.patch"
             },
