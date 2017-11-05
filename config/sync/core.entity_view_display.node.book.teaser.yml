@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.book.body
+    - field.field.node.book.field_comments
+    - field.field.node.book.field_content
+    - field.field.node.book.field_drupal_version
+    - field.field.node.book.field_legacy_content
     - node.type.book
   module:
-    - text
     - user
 _core:
   default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
@@ -16,16 +18,14 @@ targetEntityType: node
 bundle: book
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 100
-    region: content
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_comments: true
+  field_content: true
+  field_drupal_version: true
+  field_legacy_content: true
   langcode: true

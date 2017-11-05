@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.book.body
+    - field.field.node.book.field_comments
+    - field.field.node.book.field_content
+    - field.field.node.book.field_drupal_version
+    - field.field.node.book.field_legacy_content
     - node.type.book
   module:
-    - text
     - user
 _core:
   default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
@@ -15,15 +17,14 @@ targetEntityType: node
 bundle: book
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 100
+  links:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 101
-    region: content
 hidden:
+  field_comments: true
+  field_content: true
+  field_drupal_version: true
+  field_legacy_content: true
   langcode: true

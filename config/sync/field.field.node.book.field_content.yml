@@ -1,0 +1,44 @@
+uuid: e8a6b2a3-36c3-4024-a072-60181c59e55b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.book
+  module:
+    - entity_reference_revisions
+id: node.book.field_content
+field_name: field_content
+entity_type: node
+bundle: book
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      text:
+        weight: -13
+        enabled: false
+      image:
+        weight: -12
+        enabled: false
+      text_with_image:
+        weight: -11
+        enabled: false
+      link_list:
+        weight: -10
+        enabled: false
+      files:
+        weight: -9
+        enabled: false
+      gallery:
+        weight: -8
+        enabled: false
+field_type: entity_reference_revisions
