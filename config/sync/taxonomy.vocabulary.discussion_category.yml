@@ -1,0 +1,9 @@
+uuid: 64f08e63-3600-470f-85c2-330286fc8378
+langcode: de
+status: true
+dependencies: {  }
+name: 'Discussion category'
+vid: discussion_category
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,47 @@
+uuid: 0f73fe29-bc6c-49b4-abdd-355495584372
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.discussion_category.field_color
+    - taxonomy.vocabulary.discussion_category
+  module:
+    - path
+    - text
+id: taxonomy_term.discussion_category.default
+targetEntityType: taxonomy_term
+bundle: discussion_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_color:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

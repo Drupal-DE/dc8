@@ -1,0 +1,9 @@
+uuid: 50934082-5e50-470f-a82f-e8f0b20a8086
+langcode: de
+status: true
+dependencies: {  }
+name: 'Showroom category'
+vid: showroom_category
+description: ''
+hierarchy: 0
+weight: 0

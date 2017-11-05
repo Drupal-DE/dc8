@@ -1,0 +1,22 @@
+uuid: 6ab5f7b3-03cf-41e6-b9ac-1e70eed0da5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.drupal_version
+  module:
+    - text
+id: taxonomy_term.drupal_version.default
+targetEntityType: taxonomy_term
+bundle: drupal_version
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

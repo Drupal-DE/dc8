@@ -1,0 +1,11 @@
+uuid: cc00bb6b-d758-4a43-aae6-25cb57bac468
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.discussion_category
+id: taxonomy_term.discussion_category
+target_entity_type_id: taxonomy_term
+target_bundle: discussion_category
+default_langcode: site_default
+language_alterable: false
