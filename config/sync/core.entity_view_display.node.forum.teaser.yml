@@ -1,11 +1,12 @@
 uuid: 65f121db-d541-4029-b1cd-6e07455d609d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.forum.body
-    - field.field.node.forum.comment_forum
+    - field.field.node.forum.field_discussion_category
+    - field.field.node.forum.field_drupal_version
     - field.field.node.forum.taxonomy_forums
     - node.type.forum
   module:
@@ -38,5 +39,6 @@ content:
       link: true
     third_party_settings: {  }
 hidden:
-  comment_forum: true
+  field_discussion_category: true
+  field_drupal_version: true
   langcode: true

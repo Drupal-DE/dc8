@@ -1,18 +1,18 @@
-uuid: 92cbccd6-e133-4500-8657-9897fa1645e5
+uuid: 1409d850-99d8-46f9-80f6-a78223cab230
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.taxonomy_forums
-    - node.type.discussion
-    - taxonomy.vocabulary.forums
-id: node.discussion.taxonomy_forums
-field_name: taxonomy_forums
+    - field.storage.node.field_drupal_version
+    - node.type.forum
+    - taxonomy.vocabulary.drupal_version
+id: node.forum.field_drupal_version
+field_name: field_drupal_version
 entity_type: node
-bundle: discussion
-label: Forum
+bundle: forum
+label: 'Drupal version'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      forums: forums
+      drupal_version: drupal_version
     sort:
       field: name
       direction: asc

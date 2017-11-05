@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.forum.body
-    - field.field.node.forum.comment_forum
+    - field.field.node.forum.field_discussion_category
+    - field.field.node.forum.field_drupal_version
     - field.field.node.forum.taxonomy_forums
     - node.type.forum
   module:
-    - comment
     - path
     - text
 _core:
@@ -27,18 +27,30 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-  comment_forum:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_discussion_category:
+    weight: 121
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_drupal_version:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2

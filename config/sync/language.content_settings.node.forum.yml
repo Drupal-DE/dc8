@@ -1,11 +1,11 @@
-uuid: c10de2ac-088e-479b-b966-b26c2bfa2a3f
+uuid: c07aed1a-0ddd-4962-93d0-3de2417248a7
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.discussion
-id: node.discussion
+    - node.type.forum
+id: node.forum
 target_entity_type_id: node
-target_bundle: discussion
+target_bundle: forum
 default_langcode: site_default
 language_alterable: false
