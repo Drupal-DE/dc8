@@ -1,0 +1,14 @@
+uuid: e32a74d3-0505-4d5a-a101-6eb2731abc5b
+name: DrupalCenter
+mail: info@dc8.dev
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
