@@ -1,0 +1,11 @@
+uuid: 611eece0-f652-4839-a964-ba19d0dea303
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.showroom
+id: node.showroom
+target_entity_type_id: node
+target_bundle: showroom
+default_langcode: site_default
+language_alterable: false

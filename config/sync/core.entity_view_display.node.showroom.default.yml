@@ -1,0 +1,84 @@
+uuid: 94d0e459-b281-43e2-bc0d-e5a976078977
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.content_comment.default
+    - field.field.node.showroom.field_comments
+    - field.field.node.showroom.field_content
+    - field.field.node.showroom.field_drupal_version
+    - field.field.node.showroom.field_screenshot
+    - field.field.node.showroom.field_showroom_category
+    - field.field.node.showroom.field_showroom_url
+    - node.type.showroom
+  module:
+    - comment
+    - entity_reference_revisions
+    - link
+    - user
+id: node.showroom.default
+targetEntityType: node
+bundle: showroom
+mode: default
+content:
+  field_comments:
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_content:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_drupal_version:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_screenshot:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_showroom_category:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_showroom_url:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

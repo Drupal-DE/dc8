@@ -1,0 +1,46 @@
+uuid: 2f9f6915-d9cb-483d-b037-b96455c8420e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.showroom
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.showroom.field_content
+field_name: field_content
+entity_type: node
+bundle: showroom
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+    target_bundles_drag_drop:
+      text:
+        enabled: true
+        weight: -13
+      files:
+        weight: -12
+        enabled: false
+      gallery:
+        weight: -11
+        enabled: false
+      image:
+        weight: -10
+        enabled: false
+      link_list:
+        weight: -9
+        enabled: false
+      text_with_image:
+        weight: -8
+        enabled: false
+field_type: entity_reference_revisions
