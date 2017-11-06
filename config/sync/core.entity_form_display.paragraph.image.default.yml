@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image.field_headline
+    - field.field.paragraph.image.field_image
     - paragraphs.paragraphs_type.image
+  module:
+    - inline_entity_form
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
@@ -17,6 +20,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Image
+      label_plural: Images
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings: {  }
+    type: inline_entity_form_complex
     region: content
 hidden:
   created: true

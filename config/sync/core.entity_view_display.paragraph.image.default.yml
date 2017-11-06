@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image.field_headline
+    - field.field.paragraph.image.field_image
     - paragraphs.paragraphs_type.image
 id: paragraph.image.default
 targetEntityType: paragraph
@@ -17,5 +18,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden: {  }

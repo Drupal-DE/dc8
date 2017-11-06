@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.text_with_image.field_content
     - field.field.paragraph.text_with_image.field_headline
+    - field.field.paragraph.text_with_image.field_image
     - field.field.paragraph.text_with_image.field_image_position
     - paragraphs.paragraphs_type.text_with_image
   module:
+    - inline_entity_form
     - text
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
@@ -30,8 +32,21 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_image_position:
+  field_image:
     weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_image_position:
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
