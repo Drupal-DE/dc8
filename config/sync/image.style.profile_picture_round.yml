@@ -1,0 +1,17 @@
+uuid: 3c739a65-34e5-4f73-a1c0-c9758ad8b0e5
+langcode: de
+status: true
+dependencies:
+  module:
+    - focal_point
+name: profile_picture_round
+label: 'Profile picture round (43x43)'
+effects:
+  19bae67d-5228-4a70-8b67-c253651d25cb:
+    uuid: 19bae67d-5228-4a70-8b67-c253651d25cb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 43
+      height: 43
+      crop_type: focal_point
