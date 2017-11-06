@@ -1,0 +1,10 @@
+uuid: 33f47efe-bee0-4ba8-9b74-36caae4134eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.simple_upload
+label: 'Simple upload'
+targetEntityType: media
+cache: true

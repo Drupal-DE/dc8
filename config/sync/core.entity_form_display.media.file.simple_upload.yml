@@ -1,0 +1,28 @@
+uuid: 5d1671a5-09ff-4be9-a11d-d5b6f044d612
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.simple_upload
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - file
+id: media.file.simple_upload
+targetEntityType: media
+bundle: file
+mode: simple_upload
+content:
+  field_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  path: true
+  uid: true

@@ -1,11 +1,12 @@
 uuid: df799993-b4a8-4070-8e72-230bd6f71f65
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
     - field.field.node.forum.body
     - field.field.node.forum.field_discussion_category
     - field.field.node.forum.field_drupal_version
+    - field.field.node.forum.forum_replies
     - field.field.node.forum.taxonomy_forums
     - node.type.forum
   module:
@@ -16,18 +17,15 @@ id: node.forum.default
 targetEntityType: node
 bundle: forum
 mode: default
-content:
-  field_discussion_category:
-    weight: 0
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
+content: {  }
 hidden:
   body: true
+  field_discussion_category: true
   field_drupal_version: true
+  forum_replies: true
+  icon: true
   langcode: true
   links: true
   taxonomy_forums: true
+  thunder_forum_links_footer: true
+  thunder_forum_links_header: true

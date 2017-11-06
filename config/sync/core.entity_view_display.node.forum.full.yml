@@ -1,0 +1,32 @@
+uuid: 60c0aece-697e-4c0a-ade6-15efe25534bd
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.forum.body
+    - field.field.node.forum.field_discussion_category
+    - field.field.node.forum.field_drupal_version
+    - field.field.node.forum.forum_replies
+    - field.field.node.forum.taxonomy_forums
+    - node.type.forum
+  module:
+    - user
+_core:
+  default_config_hash: TM_8DV1XKUAtF-wGxTBLOtg_GTtF5CX9WLrADxG7Xm4
+id: node.forum.full
+targetEntityType: node
+bundle: forum
+mode: full
+content: {  }
+hidden:
+  body: true
+  field_discussion_category: true
+  field_drupal_version: true
+  forum_replies: true
+  icon: true
+  langcode: true
+  links: true
+  taxonomy_forums: true
+  thunder_forum_links_footer: true
+  thunder_forum_links_header: true

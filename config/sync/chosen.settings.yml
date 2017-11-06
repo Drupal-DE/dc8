@@ -13,3 +13,4 @@ disabled_themes: {  }
 chosen_include: 2
 _core:
   default_config_hash: JUHKHJeHl1bWXY41HMIcDR-VmAWvJ4OJycDubCkIeDU
+langcode: de

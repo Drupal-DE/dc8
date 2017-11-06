@@ -1,12 +1,13 @@
 uuid: 65f121db-d541-4029-b1cd-6e07455d609d
-langcode: en
-status: false
+langcode: de
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.forum.body
     - field.field.node.forum.field_discussion_category
     - field.field.node.forum.field_drupal_version
+    - field.field.node.forum.forum_replies
     - field.field.node.forum.taxonomy_forums
     - node.type.forum
   module:
@@ -30,15 +31,21 @@ content:
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
   taxonomy_forums:
     type: entity_reference_label
     weight: 10
     region: content
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
 hidden:
   field_discussion_category: true
   field_drupal_version: true
+  forum_replies: true
+  icon: true
   langcode: true
+  thunder_forum_links_footer: true
+  thunder_forum_links_header: true

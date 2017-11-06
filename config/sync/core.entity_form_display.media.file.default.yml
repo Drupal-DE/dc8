@@ -1,0 +1,40 @@
+uuid: 52fdde65-ca9b-457f-845d-eaf8c177ef1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - file
+id: media.file.default
+targetEntityType: media
+bundle: file
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  path: true
