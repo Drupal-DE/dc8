@@ -1,0 +1,170 @@
+<?php
+
+/**
+ * @file
+ * Contains dc_ui.module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media_entity\MediaInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_theme().
+ */
+function dc_ui_theme() {
+  return [
+    'dc_category_filter' => [
+      'render element' => 'element',
+      'template' => 'category-filter',
+      'file' => 'templates/theme.inc',
+    ],
+    'dc_category_filter_dropdown' => [
+      'render element' => 'element',
+      'template' => 'category-filter-dropdown',
+      'file' => 'templates/theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_editor_js_settings_alter().
+ */
+function dc_ui_editor_js_settings_alter(array &$settings) {
+  foreach (array_keys($settings['editor']['formats']) as $format) {
+    if (empty($settings['editor']['formats'][$format]['editorSettings'])) {
+      continue;
+    }
+    if (empty($settings['editor']['formats'][$format]['editorSettings']['protectedSource'])) {
+      $settings['editor']['formats'][$format]['editorSettings']['protectedSource'] = [];
+    }
+    // Allow php tags.
+    $settings['editor']['formats'][$format]['editorSettings']['protectedSource'][] = '/<\?[\s\S]*?\?>/g';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_taxonomy_term_drupal_version_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Hide fieldset relations - we only have a flat hierarchy.
+  $form['relations']['#required'] = FALSE;
+  $form['relations']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_taxonomy_term_showroom_category_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Hide fieldset relations - we only have a flat hierarchy.
+  $form['relations']['#required'] = FALSE;
+  $form['relations']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_taxonomy_term_news_category_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Hide fieldset relations - we only have a flat hierarchy.
+  $form['relations']['#required'] = FALSE;
+  $form['relations']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_node_book_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add access check for body field.
+  $form['field_legacy_content']['#access'] = _dc_ui_access_legacy_content_field();
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_node_news_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add access check for body field.
+  $form['field_legacy_content']['#access'] = _dc_ui_access_legacy_content_field();
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_node_news_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add access check for body field.
+  $form['field_legacy_content']['#access'] = _dc_ui_access_legacy_content_field();
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_ui_form_node_book_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add access check for body field.
+  $form['field_legacy_content']['#access'] = _dc_ui_access_legacy_content_field();
+}
+
+/**
+ * Helper function to check for user role.
+ *
+ */
+function _dc_ui_access_legacy_content_field() {
+  $user_roles = \Drupal::currentUser()->getRoles();
+  if (in_array('administrator', $user_roles)) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Implements hook_views_pre_build().
+ */
+function dc_ui_views_pre_build(ViewExecutable $view) {
+  if ('content_overview' === $view->id()) {
+    $view->element['#attached']['library'][] = 'dc_ui/admin.content_overview';
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function dc_ui_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // Updated element type of field_files - remove fieldset.
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getName() == 'field_files') {
+    $element['#type'] = 'container';
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave() on behalf of media entities.
+ */
+function dc_ui_media_presave(MediaInterface $entity) {
+  // Only process file/ image media entities.
+  if (!in_array($entity->bundle(), ['file', 'image'])) {
+    return;
+  }
+  // Set name to uploaded file name.
+  if (!empty($entity->field_file->entity->filename->value)) {
+    $entity->name->setValue($entity->field_file->entity->filename->value);
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function dc_ui_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  switch ($entity_type->id()) {
+    case 'node':
+      $fields['uid']->setDisplayConfigurable('view', TRUE);
+      $fields['changed']->setDisplayConfigurable('view', TRUE);
+      $fields['created']->setDisplayConfigurable('view', TRUE);
+      break;
+    case 'user':
+      $fields['name']->setDisplayConfigurable('view', TRUE);
+      break;
+    case 'comment':
+      $fields['uid']->setDisplayConfigurable('view', TRUE);
+      $fields['created']->setDisplayConfigurable('view', TRUE);
+      break;
+  }
+}
