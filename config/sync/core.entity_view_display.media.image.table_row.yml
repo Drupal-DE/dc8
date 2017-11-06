@@ -1,0 +1,31 @@
+uuid: 2564e042-20b5-4502-bce8-91897bc03c11
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.table_row
+    - field.field.media.image.field_image
+    - image.style.profile_picture_small
+    - media_entity.bundle.image
+  module:
+    - image
+id: media.image.table_row
+targetEntityType: media
+bundle: image
+mode: table_row
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: profile_picture_small
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true
