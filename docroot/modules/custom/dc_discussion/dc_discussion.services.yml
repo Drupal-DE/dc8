@@ -1,0 +1,19 @@
+services:
+  dc_discussion.path_processor:
+    class: Drupal\dc_discussion\DcDiscussionPathProcessor
+    tags:
+      - { name: path_processor_inbound, priority: 100 }
+      - { name: path_processor_outbound, priority: 300 }
+    arguments: []
+  dc_discussion.category_path_processor:
+    class: Drupal\dc_discussion\DcDiscussionCategoryPathProcessor
+    tags:
+      - { name: path_processor_inbound, priority: 100 }
+      - { name: path_processor_outbound, priority: 300 }
+    arguments: []
+
+  dc_discussion.breadcrumb.node_discussion:
+    class: Drupal\dc_discussion\Breadcrumb\DcDiscussionNodeBreadcrumbBuilder
+    arguments: []
+    tags:
+      - { name: breadcrumb_builder, priority: 101 }

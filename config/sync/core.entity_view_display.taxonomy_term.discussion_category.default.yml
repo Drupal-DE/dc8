@@ -22,3 +22,4 @@ content:
 hidden:
   field_color: true
   langcode: true
+  term_children: true

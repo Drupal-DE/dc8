@@ -22,6 +22,8 @@ module:
   ctools_views: 0
   datetime: 0
   dblog: 0
+  dc_discussion: 0
+  dc_ui: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0

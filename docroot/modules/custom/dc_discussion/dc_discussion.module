@@ -1,0 +1,342 @@
+<?php
+
+/**
+ * @file
+ * Contains dc_discussion.module.
+ */
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\dc_relation\Entity\DiscussionRelation;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_help().
+ */
+function dc_discussion_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dc_discussion module.
+    case 'help.page.dc_discussion':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('DrupalCenter discussion related tweaks.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dc_discussion_theme() {
+  return [
+    'dc_answer_count' => [
+      'render element' => 'element',
+      'template' => 'answer-count',
+      'file' => 'templates/theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function dc_discussion_entity_extra_field_info() {
+  $extra = [];
+  // Add extra fields to node type discussion.
+  // Add field answer count.
+  $extra['node']['discussion']['display']['answer_count'] = [
+    'label' => t('Answer count'),
+    'weight' => 100,
+  ];
+
+  // Add extra fields to taxonomy bundle discussion_category.
+  // Add field for term children.
+  $extra['taxonomy_term']['discussion_category']['display']['term_children'] = [
+    'label' => t('Term children'),
+    'weight' => 100,
+  ];
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ */
+function dc_discussion_node_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ('forum' !== $entity->bundle()) {
+    return;
+  }
+
+  if (($count = $display->getComponent('answer_count')) !== NULL) {
+    /* @var $service \Drupal\dc_discussion\DiscussionInformationInterface */
+    $service = \Drupal::service('dc_discussion.discussion_information');
+
+    $answer_count = $service->answerCount($entity);
+    $build['answer_count'] = [
+      '#count' => $answer_count,
+      '#entity' => $entity,
+      '#weight' => $count['weight'],
+      '#theme' => 'dc_answer_count',
+    ];
+  }
+
+  if ($display->getComponent('links')) {
+    _dc_discussion_create_node_links($build, $entity);
+  }
+}
+
+/**
+ * Implements hook_node_links_alter().
+ */
+function _dc_discussion_create_node_links(array &$build, NodeInterface $entity) {
+  /* @var $access_manager Drupal\Core\Access\AccessManagerInterface */
+  $access_manager = \Drupal::service('access_manager');
+  $user_links = [];
+  $admin_links = [];
+  if ($access_manager->checkNamedRoute('entity.node.edit_form', ['node' => $entity->id()])) {
+    $admin_links['node-edit'] = [
+      'title' => '',
+      'url' => Url::fromRoute('entity.node.edit_form', ['node' => $entity->id()]),
+      'attributes' => [
+        'uk-icon' => 'pencil',
+        'uk-tooltip' => '',
+        'title' => t('Edit', [], ['context' => 'discussion']),
+      ],
+    ];
+  }
+  if ($access_manager->checkNamedRoute('entity.node.delete_form', ['node' => $entity->id()])) {
+    $admin_links['node-delete'] = [
+      'title' => '',
+      'url' => Url::fromRoute('entity.node.delete_form', ['node' => $entity->id()]),
+      'attributes' => [
+        'uk-icon' => 'trash',
+        'uk-tooltip' => '',
+        'title' => t('Delete', [], ['context' => 'discussion']),
+      ],
+    ];
+  }
+  // @todo Rewrite to forum-reply!
+  if ($access_manager->checkNamedRoute('entity.node.discussion_answer', ['node' => $entity->id()])) {
+    $user_links['node-reply'] = [
+      'title' => '',
+      'url' => Url::fromUserInput('#block-discussion-answer'),
+      'attributes' => [
+        'uk-icon' => 'comment',
+        'uk-tooltip' => '',
+        'title' => t('Reply', [], ['context' => 'discussion']),
+      ],
+    ];
+  }
+  // @todo Rewrite to forum-reply!
+  if ($access_manager->checkNamedRoute('entity.node.discussion_answer', ['node' => $entity->id()])) {
+    $user_links['node-quote'] = [
+      'title' => '',
+      'url' => Url::fromUserInput('#block-discussion-answer'),
+      'attributes' => [
+        'uk-icon' => 'commenting',
+        'uk-tooltip' => '',
+        'title' => t('Quote', [], ['context' => 'discussion']),
+      ],
+    ];
+  }
+
+  // Flagging links.
+  /** @var \Drupal\flag\FlagService $flag_service */
+//  $flag_service = \Drupal::service('flag');
+//  // Get all possible flags for this entity type.
+//  $flags = $flag_service->getAllFlags($entity->getEntityTypeId(), $entity->bundle());
+//
+//  // Flag as spam - add flag.
+//  if ($access_manager->checkNamedRoute('flag.field_entry', ['entity_id' => $entity->id(), 'flag' => 'spam_node'])) {
+//    if (!$flags['spam_node']->isFlagged($entity)) {
+//      $user_links['node-flag-spam'] = [
+//        'title' => '',
+//        'url' => Url::fromRoute('flag.field_entry', ['entity_id' => $entity->id(), 'flag' => 'spam_node']),
+//        'query' => ['destination' => 'node/' . $entity->id()],
+//        'attributes' => [
+//          'uk-icon' => 'warning',
+//          'uk-tooltip' => '',
+//          'title' => t('Flag posting as spam', [], ['context' => 'discussion']),
+//          'class' => ['use-ajax'],
+//          'data-dialog-type' => 'modal',
+//          'data-dialog-options' => '{"width":"auto"}',
+//          'rel' => 'nofollow'
+//        ],
+//      ];
+//    }
+//  }
+//  // Flag as spam - edit flag.
+//  if ($access_manager->checkNamedRoute('flag.field_entry.edit', ['entity_id' => $entity->id(), 'flag' => 'spam_node'])) {
+//    if ($flags['spam_node']->isFlagged($entity)) {
+//      $user_links['node-flag-edit-spam'] = [
+//        'title' => '',
+//        'url' => Url::fromRoute('flag.field_entry.edit', ['entity_id' => $entity->id(),'flag' => 'spam_node']),
+//        'query' => ['destination' => 'node/' . $entity->id()],
+//        'attributes' => [
+//          'uk-icon' => 'warning',
+//          'uk-tooltip' => '',
+//          'title' => t('Unflag posting as spam', [], ['context' => 'discussion']),
+//          'class' => ['use-ajax'],
+//          'data-dialog-type' => 'modal',
+//          'data-dialog-options' => '{"width":"auto"}',
+//          'rel' => 'nofollow'
+//        ],
+//      ];
+//    }
+//  }
+
+  /* @var $service \Drupal\dc_discussion\DiscussionInformationInterface */
+//  $service = \Drupal::service('dc_discussion.discussion_information');
+//  if (!$service->isTopic($entity) && $service->getTopic($entity) instanceof NodeInterface) {
+//    // Create permalink for answers.
+//    $user_links['node-permalink'] = [
+//      'title' => '',
+//      'url' => Url::fromRoute('entity.node.canonical', ['node' => $service->getTopic($entity)->id()], ['fragment' => $entity->id()]),
+//      'attributes' => [
+//        'uk-icon' => 'link',
+//        'uk-tooltip' => '',
+//        'title' => t('Create permanent link', [], ['context' => 'discussion']),
+//      ],
+//    ];
+//  }
+//  if (!empty($admin_links)) {
+//    $build['links__admin'] = [
+//      '#theme' => 'links__admin',
+//      '#links' => $admin_links,
+//    ];
+//  }
+//  if (!empty($user_links)) {
+//    $build['links__user'] = [
+//      '#theme' => 'links__user',
+//      '#links' => $user_links,
+//    ];
+//    if (!empty($user_links['node-quote'])) {
+//      $build['links__user']['#attached'] = [
+//        'library' => 'dc_discussion/dc_discussion.quote',
+//      ];
+//    }
+//  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ */
+function dc_discussion_taxonomy_term_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  switch ($entity->bundle()) {
+    case 'discussion_category':
+      if (($children = $display->getComponent('term_children')) !== NULL) {
+        // Show view discussion answers with actual node id as parent argument.
+        $build['term_children'] = views_embed_view('discussion_categories', 'children', $entity->id());
+        $build['term_children']['#weight'] = $children['weight'];
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dc_discussion_form_taxonomy_term_discussion_category_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['field_color']['widget'][0]['value']['#field_prefix'] = '#';
+}
+
+/**
+ * Implements hook_views_post_build().
+ */
+function dc_discussion_views_post_build(ViewExecutable $view) {
+  $functions = [];
+  $functions[] = sprintf('dc_discussion_views__%s__post_build', $view->id());
+  $functions[] = sprintf('dc_discussion_views__%s_%s__post_build', $view->id(), $view->current_display);
+
+  foreach ($functions as $callback) {
+    if (!is_callable($callback)) {
+      continue;
+    }
+    call_user_func_array($callback, [$view]);
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function dc_discussion_views_data_alter(array &$data) {
+  // Provide an integration for discussion nodes.
+  foreach (\Drupal::entityManager()->getDefinitions() as $entity_type_id => $entity_type) {
+    if ('node' !== $entity_type_id || !$entity_type->isSubclassOf('\Drupal\Core\Entity\ContentEntityInterface') || !$entity_type->getBaseTable()) {
+      continue;
+    }
+    $base_table = $entity_type->getDataTable() ?: $entity_type->getBaseTable();
+    $data[$base_table]['dc_answer_count'] = [
+      'title' => t('Number of answers'),
+      'help' => t('The number of answers on the discussion.'),
+      'field' => [
+        'id' => 'node_dc_answer_count',
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ *
+ * Allow use of different form modes while using entity.form_builder::getForm().
+ */
+function dc_discussion_entity_type_alter(array &$entity_types) {
+  $type_name = 'node';
+  /* @var $entity_type \Drupal\Core\Entity\ContentEntityTypeInterface */
+  $entity_type = $entity_types[$type_name];
+  /** @var \Drupal\Core\Entity\EntityDisplayRepository[] $display_modes_list for node */
+  $form_modes = \Drupal::service('entity_display.repository')->getFormModes($type_name);
+  foreach ($form_modes as $machine_name => $form_display) {
+    // Get the correct canonical path to add operation.
+    $path = $entity_type->getLinkTemplate('canonical') . "/" . $machine_name;
+    $default_handler_class = $entity_type->getHandlerClasses()['form']['default'];
+    $entity_type->setFormClass($machine_name, $default_handler_class)->setLinkTemplate($machine_name, $path);
+  }
+}
+
+/**
+ * Implements hook_options_list_alter().
+ */
+function dc_ui_options_list_alter(array &$options, array $context) {
+  /* @var $field_definition \Drupal\Core\Field\FieldDefinitionInterface */
+  $field_definition = $context['fieldDefinition'];
+  // Check if this is the field we want to change.
+  if ('node.discussion.field_discussion_category' !== $field_definition->id()) {
+    return;
+  }
+
+  // Rewrite options to optgroups.
+  $options_new = [];
+  if (isset($options['_none'])) {
+    $options_new['_none'] = $options['_none'];
+  }
+  $group = [];
+  foreach ($options as $key => $value) {
+    if ('_none' === $key) {
+      continue;
+    }
+    if (strpos($value, '-') === FALSE) {
+      if (!empty($group['items'])) {
+        // Add optgroup to options.
+        $options_new[$group['name']] = $group['items'];
+        $group = [
+          'name' => '',
+          'items' => [],
+        ];
+      }
+      $group['name'] = $value;
+      continue;
+    }
+    $group['items'][$key] = $value;
+  }
+  if (!empty($group['items'])) {
+    $options_new[$group['name']] = $group['items'];
+  }
+  $options = $options_new;
+}
