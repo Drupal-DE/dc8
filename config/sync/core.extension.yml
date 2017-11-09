@@ -23,6 +23,7 @@ module:
   datetime: 0
   dblog: 0
   dc_discussion: 0
+  dc_quote: 0
   dc_ui: 0
   dc_user: 0
   dynamic_page_cache: 0
