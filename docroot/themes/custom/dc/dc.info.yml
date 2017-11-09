@@ -1,0 +1,27 @@
+name: DrupalCenter v8
+type: theme
+description: DrupalCenter theme based on uikit3.
+package: DrupalCenter
+core: 8.x
+base theme: classy
+libraries:
+  - dc/uikit3_base
+  - dc/fonts
+  - dc/default
+
+stylesheets-remove:
+  - '@classy/css/components/tabs.css'
+  - core/assets/vendor/normalize-css/normalize.css
+
+regions:
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  footer: 'Footer'
+  header_login: 'Header login'
+  header_search: 'Header search'
+  header_user_menu: 'Header user menu'
+  help: 'Help'
+  highlighted: 'Highlighted'
+  mainmenu: 'Mainmenu'
+  navigation: 'Navigation'
+  sidebar_right: 'Sidebar right'

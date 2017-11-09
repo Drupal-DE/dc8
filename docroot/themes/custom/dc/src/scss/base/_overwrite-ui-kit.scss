@@ -1,0 +1,18 @@
+.uk-subnav {
+  button {
+    color: $color--white !important;
+  }
+}
+.uk-badge {
+  background: $color--light-navy-blue;
+  border-radius: 0px;
+  padding: 0 8px;
+  &:hover {
+    background: $color--navy-blue;
+  }
+}
+
+.uk-comment-title {
+  font-size: 1rem;
+  line-height: 1.2;
+}

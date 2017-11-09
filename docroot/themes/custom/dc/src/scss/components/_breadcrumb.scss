@@ -1,0 +1,14 @@
+.uk-breadcrumb {
+  a,
+  span,
+  &>:last-child>* {
+    color: $color--white;
+    font-size: 0.8rem;
+    &:hover {
+      color: $color--light-blue-header;
+    }
+  }
+  &>:nth-child(n+2):not(.uk-first-column)::before {
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "dc",
+  "version": "1.0.0",
+  "description": "DrupalCenter Drupal8 theme",
+  "scripts": {
+    "build": "node-sass --output-style compressed --include-path src/scss src/scss/style.scss dist/css/style.css",
+    "watch": "nodemon --watch **/*.scss --ext scss --exec 'npm run build'"
+  },
+  "author": "SteffenR",
+  "license": "GPL",
+  "dependencies": {
+    "node-sass": "^4.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

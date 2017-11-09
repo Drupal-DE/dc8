@@ -1,0 +1,9 @@
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+    'category-children',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ rows }}
+</div>

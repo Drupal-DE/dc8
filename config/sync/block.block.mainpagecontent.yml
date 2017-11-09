@@ -1,0 +1,26 @@
+uuid: f2fa4ebf-85b7-4045-b952-a551234598d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - dc
+id: mainpagecontent
+theme: dc
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,13 @@
+{% if links %}
+  <ul{{ attributes.addClass('links', 'uk-iconnav', 'uk-text-small').removeClass('inline') }}>
+    {%- for item in links -%}
+      <li{{ item.attributes.addClass('itemlink') }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- else -%}
+          <span{{ item.text_attributes }}>{{ item.text }}</span>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{% endif %}

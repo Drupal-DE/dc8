@@ -1,0 +1,20 @@
+.uk-label.marker--color {
+  padding: 0 5px;
+  min-height: 10px;
+}
+.uk-icon {
+  &.marked-new {
+    color: $color--notice;
+
+    path {
+      fill: $color--notice;
+    }
+  }
+  &.marked-updated {
+    color: $color--warning;
+
+    path {
+      fill: $color--warning;
+    }
+  }
+}

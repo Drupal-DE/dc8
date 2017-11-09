@@ -1,0 +1,21 @@
+{% set classes = [
+  'uk-grid-small',
+  'uk-flex-center'
+] %}
+<div{{- attributes.addClass(classes) -}} uk-grid>
+  <div>
+    {{- author_picture -}}
+  </div>
+  <div class="uk-comment-body uk-margin-bottom uk-width-expand@m">
+    {{ title_prefix }}
+    <h3{{ title_attributes.addClass('uk-comment-title', 'uk-margin-small-bottom') }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h3>
+    {{ title_suffix }}
+    {{- content.body -}}
+    {{- content.field_discussion_category -}}
+  </div>
+  <div class="uk-comment-meta">
+    {{- content.answer_count -}}
+  </div>
+</div>

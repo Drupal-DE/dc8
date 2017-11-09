@@ -1,0 +1,39 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  letter-spacing: $base-letter-spacing;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-font-family;
+  font-weight: $headline-font-weight;
+  a {
+    color: $color--grey;
+  }
+}
+
+.uk-h1, h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+strong {
+  font-weight: $strong-font-weight;
+}
+
+.dc-heading {
+  color: $color--grey;
+  font-weight: 400;
+}

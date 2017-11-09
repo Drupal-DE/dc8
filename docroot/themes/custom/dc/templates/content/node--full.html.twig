@@ -1,0 +1,46 @@
+{% set classes = [
+'uk-article',
+'uk-margin-bottom',
+'uk-box-shadow-small',
+'uk-padding-small',
+'uk-visible-toggle'
+] %}
+<article{{ attributes.addClass(classes) }}>
+  <header class="uk-comment-header uk-position-relative">
+    {% block node_header_meta %}
+      <div class="uk-grid-medium uk-flex-top" uk-grid>
+        <div class="uk-width-auto">
+          {{ author_picture }}
+        </div>
+        <div class="uk-width-expand">
+          <h4 class="uk-comment-title uk-margin-remove">{{ author_name }}</h4>
+          <p class="uk-comment-meta uk-margin-remove-top">{{ date }}</p>
+        </div>
+      </div>
+    {% endblock %}
+  </header>
+  {% block node_header_links %}
+    {% if content.links__admin %}
+      <div class="uk-position-small uk-position-top-right uk-hidden-hover">
+        {{ content.links__admin }}
+      </div>
+    {% endif %}
+  {% endblock %}
+  <div class="uk-comment-body">
+    {% block node_body %}
+      {{ content.field_legacy_content }}
+      {{ content.field_content }}
+    {% endblock %}
+  </div>
+  {% block node_footer_links %}
+    {% if content.links__user %}
+      <div class="uk-position-small uk-position-bottom-right uk-hidden-hover">
+        {{ content.links__user }}
+      </div>
+    {% endif %}
+  {% endblock %}
+</article>
+{% block node_attachment_after %}
+  {{ content.field_comments }}
+{% endblock %}
+

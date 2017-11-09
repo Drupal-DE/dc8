@@ -1,0 +1,17 @@
+{% embed "@dc/components/comment.html.twig" %}
+  {% block comment_anchor %}
+    <a name="{{- node.id -}}"></a>
+  {% endblock %}
+  {% block comment_header_meta %}
+    <div class="uk-width-auto">
+      {{ author_picture }}
+    </div>
+    <div class="uk-width-expand">
+      <h4 class="uk-comment-title uk-margin-remove dc-heading">{{ label }}</h4>
+      <p class="uk-comment-meta uk-margin-remove-top">{{ author_name }} | {{ date }}</p>
+    </div>
+  {% endblock %}
+  {% block comment_body %}
+    {{ content.body }}
+  {% endblock %}
+{% endembed %}

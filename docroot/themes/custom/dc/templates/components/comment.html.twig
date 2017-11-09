@@ -1,0 +1,48 @@
+{% set classes = [
+  'uk-comment',
+  'uk-comment-primary',
+  'uk-margin-left',
+  'uk-margin-bottom',
+  'uk-padding-small',
+  'uk-visible-toggle'
+] %}
+{% block comment_anchor %}
+{% endblock %}
+<article role="article"{{ attributes.addClass(classes)|without('role') }}>
+  <header class="uk-comment-header uk-position-relative">
+    <div class="uk-grid-medium uk-flex-top" uk-grid>
+      {% block comment_header_meta %}
+        <div class="uk-width-auto">
+          {{ user_picture }}
+        </div>
+        <div class="uk-width-expand">
+          <h4 class="uk-comment-title uk-margin-remove dc-heading">{{ comment.getSubject() }}</h4>
+          <p class="uk-comment-meta uk-margin-remove-top">{{ author }} | {{ content.created }} | {{ permalink }}</p>
+        </div>
+      {% endblock %}
+    </div>
+  </header>
+  {% if content.links %}
+    {% block comment_header_links %}
+      {% if content.links__admin %}
+        <div class="uk-position-small uk-position-top-right uk-hidden-hover">
+          {{ content.links__admin }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  {% endif %}
+  <div class="uk-comment-body">
+    {% block comment_body %}
+      {{ content|without('links', 'created') }}
+    {% endblock %}
+  </div>
+  {% if content.links %}
+    {% block comment_footer_links %}
+      {% if content.links__user %}
+        <div class="uk-position-small uk-position-bottom-right uk-hidden-hover">
+          {{ content.links__user }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  {% endif %}
+</article>
