@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c1dda696578bba09498f0c553068d9a",
+    "content-hash": "27068e394f72925397ad0def7fb54cfd",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7075,6 +7075,31 @@
             "time": "2017-09-27T18:06:46+00:00"
         },
         {
+            "name": "undpaul/up-migrate",
+            "version": "dev-8.x-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/undpaul/up-migrate.git",
+                "reference": "a627caae8c8166c30b6bc03fd30243715c081158"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/undpaul/up-migrate/zipball/a627caae8c8166c30b6bc03fd30243715c081158",
+                "reference": "a627caae8c8166c30b6bc03fd30243715c081158",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPLv3"
+            ],
+            "description": "Provides some migration plugins and helpers",
+            "support": {
+                "source": "https://github.com/undpaul/up-migrate/tree/8.x-3.x",
+                "issues": "https://github.com/undpaul/up-migrate/issues"
+            },
+            "time": "2017-09-01 18:35:53"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -7483,7 +7508,8 @@
         "drupal/search_api": 20,
         "drupal/search_api_solr": 20,
         "drupal/views_block_filter_block": 20,
-        "drupal/views_lazy_load": 20
+        "drupal/views_lazy_load": 20,
+        "undpaul/up-migrate": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
