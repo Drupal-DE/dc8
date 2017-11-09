@@ -1,0 +1,26 @@
+uuid: 41f6ee33-5769-4441-9a96-3a0be3a4f9fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - dc_user
+  theme:
+    - dc
+id: header_user_login
+theme: dc
+region: header_login
+weight: 0
+provider: null
+plugin: user_login_header
+settings:
+  id: user_login_header
+  label: 'Header user login'
+  provider: dc_user
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
