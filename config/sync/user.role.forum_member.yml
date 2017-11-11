@@ -1,0 +1,10 @@
+uuid: b0fe9bc0-fd0c-4d8d-b626-9169f73f6d40
+langcode: en
+status: true
+dependencies: {  }
+id: forum_member
+label: 'Forum member'
+weight: 4
+is_admin: null
+permissions:
+  - 'access user profiles'
