@@ -10,6 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
+    wysiwyg_full: '0'
+    wysiwyg_small: '0'
     plain_text: '0'
 id: paragraph.text.field_content
 field_name: field_content

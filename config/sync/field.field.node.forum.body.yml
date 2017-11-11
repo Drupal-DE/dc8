@@ -6,7 +6,13 @@ dependencies:
     - field.storage.node.body
     - node.type.forum
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    wysiwyg_full: '0'
+    wysiwyg_small: '0'
+    plain_text: '0'
 _core:
   default_config_hash: xSp91evhyztzrWlSVAiXsWNZReMhYXvcAEg59GLfZjg
 id: node.forum.body
@@ -20,5 +26,5 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
 field_type: text_with_summary
