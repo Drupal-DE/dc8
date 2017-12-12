@@ -8,3 +8,4 @@ weight: 3
 is_admin: null
 permissions:
   - 'access user profiles'
+  - 'use text format wysiwyg_full'

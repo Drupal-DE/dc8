@@ -15,6 +15,12 @@ rewrites:
     add: /showroom-eintrag/erstellen
     edit: '/showroom-eintrag/[nid]/bearbeiten'
     delete: '/showroom-eintrag/[nid]/loeschen'
+upload_location:
+  files:
+    node_handbook_form: 'public://handbook/[date:custom:Y]/[date:custom:m]'
+    node_news_form: 'public://news/[date:custom:Y]/[date:custom:m]'
+  images:
+    user_form: 'public://users'
 _core:
-  default_config_hash: 7OdA88VOv89xljBVkSmx8TKYoAENUhPWotGIRZ9ZbD8
+  default_config_hash: eFkaZrfIwk_e-V-3f_Y2y2d3j5gGYumbehLbFuBXFwg
 langcode: de

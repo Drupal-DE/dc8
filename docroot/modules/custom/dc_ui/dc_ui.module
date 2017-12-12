@@ -5,8 +5,10 @@
  * Contains dc_ui.module.
  */
 
+use Drupal\Component\Render\PlainTextOutput;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 use Drupal\media_entity\MediaInterface;
 use Drupal\views\ViewExecutable;
 
@@ -166,5 +168,24 @@ function dc_ui_entity_base_field_info_alter(&$fields, EntityTypeInterface $entit
       $fields['uid']->setDisplayConfigurable('view', TRUE);
       $fields['created']->setDisplayConfigurable('view', TRUE);
       break;
+  }
+}
+
+/**
+ * Implements hook_inline_entity_form_entity_form_alter().
+ */
+function dc_ui_inline_entity_form_entity_form_alter(&$entity_form, FormStateInterface $form_state) {
+  $location = \Drupal::config('dc_ui.settings')->get('upload_location');
+  $form_id = $form_state->getBuildInfo()['form_id'];
+  $bundle = $entity_form['#bundle'];
+  if (!isset($entity_form["field_{$bundle}"]) || !isset($location["{$bundle}s"][$form_id])) {
+    return;
+  }
+  $destination = trim($location["{$bundle}s"][$form_id], '/');
+  // Replace tokens. Tokens might contain HTML, so convert it to plain text.
+  $destination = PlainTextOutput::renderFromHtml(\Drupal::token()->replace($destination));
+  foreach (Element::children($entity_form["field_{$bundle}"]['widget']) as $key) {
+    // Set upload location.
+    $entity_form["field_{$bundle}"]['widget'][$key]['#upload_location'] = $destination;
   }
 }

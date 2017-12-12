@@ -15,3 +15,9 @@ rewrites:
     add: '/showroom-eintrag/erstellen'
     edit: '/showroom-eintrag/[nid]/bearbeiten'
     delete: '/showroom-eintrag/[nid]/loeschen'
+upload_location:
+  files:
+    node_book_form: 'public://handbook/[date:custom:Y]/[date:custom:m]'
+    node_news_form: 'public://news/[date:custom:Y]/[date:custom:m]'
+  images:
+    user_form: 'public://users'

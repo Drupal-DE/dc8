@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.book.field_legacy_content
     - node.type.book
   module:
+    - entity_reference_revisions
+    - text
     - user
 _core:
   default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
@@ -17,14 +19,46 @@ targetEntityType: node
 bundle: book
 mode: default
 content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_legacy_content:
+    type: text_default
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  changed: true
   field_comments: true
-  field_content: true
   field_drupal_version: true
-  field_legacy_content: true
   langcode: true
