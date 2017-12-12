@@ -35,6 +35,11 @@
         },
         {
             "type": "vcs",
+            "name": "drupalcenter/dc-migrate",
+            "url": "https://github.com/stborchert/dc-migrate.git"
+        },
+        {
+            "type": "vcs",
             "name": "drupal/views_lazy_load",
             "url": "https://github.com/stborchert/views_lazy_load"
         },
@@ -121,6 +126,7 @@
         "drupal/token": "^1.0",
         "drupal/views_block_filter_block": "1.x-dev",
         "drupal/views_lazy_load": "dev-8.x-1.x",
+        "drupalcenter/dc-migrate": "dev-8.x-4.x",
         "drush/drush": "8.1.15",
         "harvesthq/chosen": "^1.6",
         "undpaul/up-migrate": "dev-8.x-3.x"

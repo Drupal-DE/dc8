@@ -1,14 +1,14 @@
-uuid: f5d7863c-27ad-474f-8776-f95ae8fae54a
+uuid: 0f830e36-7923-4176-816c-a349b3e77344
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_color
-    - taxonomy.vocabulary.discussion_category
-id: taxonomy_term.discussion_category.field_color
+    - taxonomy.vocabulary.forums
+id: taxonomy_term.forums.field_color
 field_name: field_color
 entity_type: taxonomy_term
-bundle: discussion_category
+bundle: forums
 label: Color
 description: ''
 required: false

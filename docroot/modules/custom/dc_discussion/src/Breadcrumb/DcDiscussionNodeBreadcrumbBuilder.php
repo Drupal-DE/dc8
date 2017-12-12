@@ -52,7 +52,7 @@ class DcDiscussionNodeBreadcrumbBuilder extends DcNodeBreadcrumbBuilder {
    * Helper function to create breadcrumbs for topic nodes.
    *
    * @param Node $node
-   *   Node object of bundle "msg_topic".
+   *   Node object of bundle "forum".
    * @param Breadcrumb $breadcrumb
    *   Breadcrumb to alter.
    *
@@ -67,7 +67,7 @@ class DcDiscussionNodeBreadcrumbBuilder extends DcNodeBreadcrumbBuilder {
       }
       /* @var category \Drupal\taxonomy\TermInterface */
       $category = Term::load($node->field_discussion_category->target_id);
-      if (empty($category) || ('discussion_category' !== $category->getVocabularyId())) {
+      if (empty($category) || ('forums' !== $category->getVocabularyId())) {
         return $breadcrumb;
       }
       $term_storage = Drupal::entityTypeManager()->getStorage('taxonomy_term');

@@ -1,8 +1,9 @@
-uuid: dbe6c7b7-fa83-4d8f-875d-f55270f406b5
+uuid: 2cb86384-c9b4-4660-949e-4841c0cfffa4
 langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.list_teaser
     - field.field.taxonomy_term.forums.field_color
     - field.field.taxonomy_term.forums.forum_container
     - taxonomy.vocabulary.forums
@@ -10,10 +11,10 @@ dependencies:
     - text
 _core:
   default_config_hash: fEFqA0_1VTvfhDVWt2yXcjfTWwsOw9YoC1xg-SO8Tms
-id: taxonomy_term.forums.default
+id: taxonomy_term.forums.list_teaser
 targetEntityType: taxonomy_term
 bundle: forums
-mode: default
+mode: list_teaser
 content:
   description:
     type: text_default
@@ -22,6 +23,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+  term_children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_color: true
   forum_container: true

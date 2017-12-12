@@ -19,8 +19,8 @@ class DcDiscussionCategoryPathProcessor implements InboundPathProcessorInterface
    * {@inheritdoc}
    */
   public function processInbound($path, Request $request) {
-    // Process path "discussions/c/[term]".
-    if (preg_match('|^/_discussions/c/(?P<tid>[0-9]+)|', $path, $matches)) {
+    // Process path "forum/c/[term]".
+    if (preg_match('|^/forum/c/(?P<tid>[0-9]+)|', $path, $matches)) {
       $path = '/taxonomy/term/' . $matches['tid'];
     }
 
@@ -35,8 +35,8 @@ class DcDiscussionCategoryPathProcessor implements InboundPathProcessorInterface
     if (preg_match('|^/taxonomy/term/(?P<tid>[0-9]+)|', $path, $matches)) {
       // We have to load node object to retrieve actual type.
       $term = Term::load($matches['tid']);
-      if ($term->bundle() == 'discussion_category') {
-        $path = '/discussions/c/' . $matches['tid'];
+      if ($term->bundle() == 'forums') {
+        $path = '/forum/c/' . $matches['tid'];
       }
     }
 

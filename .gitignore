@@ -29,4 +29,3 @@ docroot/sites/*/private
 !/migration/files
 /migration/files/*
 !/migration/fixed
-

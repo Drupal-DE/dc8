@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "27068e394f72925397ad0def7fb54cfd",
+    "content-hash": "6dd2cce4ed2a4218499fbe10a5f66017",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3968,6 +3968,31 @@
             "time": "2017-01-13 08:11:48"
         },
         {
+            "name": "drupalcenter/dc-migrate",
+            "version": "dev-8.x-4.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stborchert/dc-migrate.git",
+                "reference": "a92f5a653a5936a492be0afff15f203188e6a082"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stborchert/dc-migrate/zipball/a92f5a653a5936a492be0afff15f203188e6a082",
+                "reference": "a92f5a653a5936a492be0afff15f203188e6a082",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPLv3"
+            ],
+            "description": "Provides migrations for DrupalCenter",
+            "support": {
+                "source": "https://github.com/stborchert/dc-migrate/tree/8.x-4.x",
+                "issues": "https://github.com/stborchert/dc-migrate/issues"
+            },
+            "time": "2017-11-10 10:05:02"
+        },
+        {
             "name": "drush/drush",
             "version": "8.1.15",
             "source": {
@@ -7080,12 +7105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/undpaul/up-migrate.git",
-                "reference": "a627caae8c8166c30b6bc03fd30243715c081158"
+                "reference": "1eb61de21750455a7f89bef0f744bb138973b12a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/undpaul/up-migrate/zipball/a627caae8c8166c30b6bc03fd30243715c081158",
-                "reference": "a627caae8c8166c30b6bc03fd30243715c081158",
+                "url": "https://api.github.com/repos/undpaul/up-migrate/zipball/1eb61de21750455a7f89bef0f744bb138973b12a",
+                "reference": "1eb61de21750455a7f89bef0f744bb138973b12a",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -7097,7 +7122,7 @@
                 "source": "https://github.com/undpaul/up-migrate/tree/8.x-3.x",
                 "issues": "https://github.com/undpaul/up-migrate/issues"
             },
-            "time": "2017-09-01 18:35:53"
+            "time": "2017-11-15 06:27:14"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -7509,6 +7534,7 @@
         "drupal/search_api_solr": 20,
         "drupal/views_block_filter_block": 20,
         "drupal/views_lazy_load": 20,
+        "drupalcenter/dc-migrate": 20,
         "undpaul/up-migrate": 20
     },
     "prefer-stable": true,
