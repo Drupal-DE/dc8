@@ -124,6 +124,7 @@
         "drupal/search_api": "dev-1.x",
         "drupal/search_api_solr": "dev-1.x",
         "drupal/token": "^1.0",
+        "drupal/user_restrictions": "dev-1.x",
         "drupal/views_block_filter_block": "1.x-dev",
         "drupal/views_lazy_load": "dev-8.x-1.x",
         "drupalcenter/dc-migrate": "dev-8.x-4.x",
@@ -185,6 +186,9 @@
             "drupal/page_manager": {
                 "Warning: Missing argument 1 for PageVariantContextsForm::getContextClass() [#2799885]": "https://www.drupal.org/files/issues/2799885-page_manager-context_adding_fix.patch",
                 "Page Manager paths should support optional arguments as well [#2810329]": "https://www.drupal.org/files/issues/allow_optional_parameters-2810329-3.patch"
+            },
+            "drupal/user_restrictions": {
+                "Various D8 issues [#2889974]": "https://www.drupal.org/files/issues/user_restrictions-2889974-2-various-d8-fixes.patch"
             }
         }
     },

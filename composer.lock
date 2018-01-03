@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dd2cce4ed2a4218499fbe10a5f66017",
+    "content-hash": "5c6d3864ddbfc1153f66641dc46655d1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3897,6 +3897,64 @@
             }
         },
         {
+            "name": "drupal/user_restrictions",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/user_restrictions",
+                "reference": "98802b1944912043f743193d51dc5e7c54dbd0b0"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1489525382",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "catch",
+                    "homepage": "https://www.drupal.org/user/35733"
+                },
+                {
+                    "name": "fizk",
+                    "homepage": "https://www.drupal.org/user/473174"
+                },
+                {
+                    "name": "psynaptic",
+                    "homepage": "https://www.drupal.org/user/93429"
+                },
+                {
+                    "name": "snufkin",
+                    "homepage": "https://www.drupal.org/user/58645"
+                },
+                {
+                    "name": "typhonius",
+                    "homepage": "https://www.drupal.org/user/1295980"
+                }
+            ],
+            "description": "Specifies rules for restricting users allowed access to a site.",
+            "homepage": "https://www.drupal.org/project/user_restrictions",
+            "support": {
+                "source": "http://cgit.drupalcode.org/user_restrictions"
+            },
+            "time": "2017-03-14 20:59:57"
+        },
+        {
             "name": "drupal/views_block_filter_block",
             "version": "dev-1.x",
             "source": {
@@ -7532,6 +7590,7 @@
         "drupal/pathauto": 20,
         "drupal/search_api": 20,
         "drupal/search_api_solr": 20,
+        "drupal/user_restrictions": 20,
         "drupal/views_block_filter_block": 20,
         "drupal/views_lazy_load": 20,
         "drupalcenter/dc-migrate": 20,
