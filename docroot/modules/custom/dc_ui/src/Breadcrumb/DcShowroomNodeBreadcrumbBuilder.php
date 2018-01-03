@@ -25,7 +25,7 @@ class DcShowroomNodeBreadcrumbBuilder extends DcNodeBreadcrumbBuilder {
     $breadcrumb = parent::build($route_match);
 
     // Add link to discussion overview.
-    $breadcrumb->addLink(Link::createFromRoute($this->t('Showroom'), 'page_manager.page_view_showroom'));
+//    $breadcrumb->addLink(Link::createFromRoute($this->t('Showroom'), 'page_manager.page_view_showroom'));
 
     /** @var \Drupal\node\Entity\NodeInterface $node */
     if (($node = $route_match->getParameter('node')) === NULL) {

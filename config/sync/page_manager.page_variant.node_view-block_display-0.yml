@@ -1,0 +1,61 @@
+uuid: 843ce4e0-f2d1-4f40-a660-702230fe3941
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+  module:
+    - ctools
+    - ctools_block
+    - node
+id: node_view-block_display-0
+label: 'Forum topic'
+variant: block_display
+variant_settings:
+  blocks:
+    24f55aad-8ca5-4648-b893-dc61549f29e0:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: full
+      region: top
+      weight: 0
+      uuid: 24f55aad-8ca5-4648-b893-dc61549f29e0
+      context_mapping:
+        entity: node
+    5221a001-59e4-484e-b0cb-4e935e9d38de:
+      id: 'entity_field:node:forum_replies'
+      label: 'Forum replies'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: above
+        type: thunder_forum_reply_default
+        settings:
+          view_mode: default
+          pager_id: '0'
+        third_party_settings: {  }
+        weight: 0
+      region: top
+      weight: 0
+      uuid: 5221a001-59e4-484e-b0cb-4e935e9d38de
+      context_mapping:
+        entity: node
+  id: block_display
+  uuid: 18627c4f-193a-4305-bb5a-429228caf16e
+  label: null
+  weight: 0
+  page_title: ''
+page: node_view
+weight: -10
+selection_criteria:
+  1:
+    id: node_type
+    bundles:
+      forum: forum
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

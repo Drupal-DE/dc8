@@ -9,11 +9,11 @@ use Drupal\taxonomy\Entity\Term;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * PathProcessor for discussion categories.
+ * PathProcessor for forum terms.
  *
  * @package Drupal\dc_discussion
  */
-class DcDiscussionCategoryPathProcessor implements InboundPathProcessorInterface, OutboundPathProcessorInterface {
+class DcForumTermPathProcessor implements InboundPathProcessorInterface, OutboundPathProcessorInterface {
 
   /**
    * {@inheritdoc}

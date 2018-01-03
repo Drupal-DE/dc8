@@ -7,18 +7,18 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceLabelFormatter;
 
 /**
- * Plugin implementation of the 'discussion category colored' formatter.
+ * Plugin implementation of the 'term reference colored' formatter.
  *
  * @FieldFormatter(
- *   id = "dc_ui_discussion_category_colored",
- *   label = @Translation("Colored discussion category"),
- *   description = @Translation("Display discussion category with color indicator."),
+ *   id = "dc_ui_term_reference_colored",
+ *   label = @Translation("Colored term reference"),
+ *   description = @Translation("Display term references with color indicator."),
  *   field_types = {
  *     "entity_reference"
  *   }
  * )
  */
-class DcUiDiscussionCategoryColored extends EntityReferenceLabelFormatter {
+class DcUiTermReferenceColored extends EntityReferenceLabelFormatter {
 
   /**
    * {@inheritdoc}

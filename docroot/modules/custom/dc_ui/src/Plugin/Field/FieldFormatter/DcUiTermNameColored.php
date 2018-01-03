@@ -7,18 +7,18 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\StringFormatter;
 
 /**
- * Plugin implementation of the 'string' formatter.
+ * Plugin implementation of the 'term name colored' formatter.
  *
  * @FieldFormatter(
- *   id = "dc_ui_discussion_name_colored",
- *   label = @Translation("Colored discussion category name"),
- *   description = @Translation("Display discussion category name with color indicator."),
+ *   id = "dc_ui_term_name_colored",
+ *   label = @Translation("Colored term name"),
+ *   description = @Translation("Display term name with color indicator."),
  *   field_types = {
  *     "string",
  *   }
  * )
  */
-class DcUiDiscussionNameColored extends StringFormatter {
+class DcUiTermNameColored extends StringFormatter {
 
   /**
    * {@inheritdoc}

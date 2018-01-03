@@ -39,6 +39,7 @@ function drush_dc_filter_code_update_codephp() {
     'init_message' => 'Update php tags',
     'operations' => [
       ['_dc_filter_code_update_codephp_process', [$options]],
+      ['_dc_filter_comment_code_update_codephp_process', [$options]],
     ],
     'progress_message' => 'Processed @current out of @total.',
     'finished' => '_dc_filter_batch_finished',
@@ -63,7 +64,7 @@ function _dc_filter_code_update_codephp_process($options, &$context) {
   $query = $database->select('node__body', 'n');
   $query->fields('n', ['revision_id', 'body_value']);
   $query->orderBy('revision_id');
-  $query->condition('bundle', 'discussion');
+  $query->condition('bundle', 'forum');
   $query->condition('body_value', '%' . $database->escapeLike('<?php') . '%', 'LIKE');
 
   $batch_size = $options['batch-size'];
@@ -109,6 +110,73 @@ function _dc_filter_code_update_codephp_process($options, &$context) {
       $database->update('node_revision__body')
         ->fields([
           'body_value' => $value,
+        ])
+        ->condition('revision_id', $row->revision_id)
+        ->execute();
+      $context['results']['updated'] ++;
+    }
+
+    $context['sandbox']['progress'] ++;
+    $context['results']['processed'] ++;
+    $context['finished'] = $context['sandbox']['progress'] / $context['sandbox']['max'];
+  }
+  $context['message'] = sprintf('Processed %d out of %d items', $context['results']['processed'], $context['sandbox']['max']);
+}
+
+/**
+ * Batch operation to update <code><?php ?></code> tags in forum comments.
+ *
+ * @param array $options
+ *   Additional batch options (i.e. 'batch-size').
+ * @param array $context
+ *   Context information used for the batch.
+ */
+function _dc_filter_comment_code_update_codephp_process($options, &$context) {
+  $database = \Drupal::database();
+
+  $query = $database->select('comment__comment_body', 'c');
+  $query->fields('c', ['revision_id', 'comment_body_value']);
+  $query->orderBy('revision_id');
+  $query->condition('bundle', 'content_comment');
+  $query->condition('comment_body_value', '%' . $database->escapeLike('<?php') . '%', 'LIKE');
+
+  $batch_size = $options['batch-size'];
+  $limit = $options['limit'];
+  if ($limit > 0 && $limit < $batch_size) {
+    $batch_size = $limit;
+  }
+  $max = $query->countQuery()->execute()->fetchField();
+  if ($limit > -1 && $limit > $max) {
+    $max = $limit;
+  }
+
+  if (empty($context['sandbox']['max'])) {
+    $context['finished'] = 0;
+    $context['sandbox']['max'] = $max;
+    $context['sandbox']['progress'] = 0;
+    $context['message'] = 'Update code: php ...';
+    $context['results']['updated'] = 0;
+    $context['results']['failures'] = 0;
+    $context['results']['processed'] = 0;
+  }
+
+  // Limit resultset.
+  $query->range($context['results']['processed'], $batch_size);
+
+  $results = $query->execute()->fetchAllAssoc('revision_id');
+
+  foreach ($results as $row) {
+    $count = 0;
+
+    $value = preg_replace_callback('/(<code>\s*\n*\s*<\?php)(?P<content>.*)(\?>\s*\n*\s*<\/code>)/Us', '_dc_filter_code_replace_codephp', $row->comment_body_value, -1, $count);
+    $needs_update = ($count > 0);
+    $value = preg_replace_callback('/(<\?php)(?P<content>.*)(\?>)/', '_dc_filter_code_replace_php', $value, -1, $count);
+    $needs_update |= ($count > 0);
+
+    if ($needs_update) {
+      $database->update('comment__comment_body')
+        ->fields([
+          'comment_body_value' => $value,
         ])
         ->condition('revision_id', $row->revision_id)
         ->execute();

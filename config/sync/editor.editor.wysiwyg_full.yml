@@ -1,0 +1,105 @@
+uuid: 859748f6-b8d0-48e0-946a-c8b315d2c71c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg_full
+  module:
+    - ckeditor
+format: wysiwyg_full
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - Strike
+            - '-'
+            - Superscript
+            - Subscript
+            - '-'
+            - Format
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - '-'
+            - Outdent
+            - Indent
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Tools
+          items:
+            - Undo
+            - Redo
+            - '-'
+            - CodeSnippet
+            - Code
+            - Source
+            - '-'
+            - HorizontalRule
+            - Cut
+            - Copy
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+    codesnippet:
+      highlight_style: github
+      highlight_languages:
+        bash: bash
+        css: css
+        diff: diff
+        html: html
+        ini: ini
+        json: json
+        javascript: javascript
+        makefile: makefile
+        php: php
+        sql: sql
+        xhtml: xhtml
+        xml: xml
+        apache: 0
+        cs: 0
+        cpp: 0
+        coffeescript: 0
+        http: 0
+        java: 0
+        markdown: 0
+        nginx: 0
+        objectivec: 0
+        perl: 0
+        python: 0
+        ruby: 0
+        vbscript: 0
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

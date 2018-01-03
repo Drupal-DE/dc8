@@ -9,11 +9,11 @@ use Drupal\node\Entity\Node;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class DcDiscussionPathProcessor.
+ * PathProcessor for forum nodes.
  *
  * @package Drupal\dc_discussion
  */
-class DcDiscussionPathProcessor implements InboundPathProcessorInterface, OutboundPathProcessorInterface {
+class DcForumPathProcessor implements InboundPathProcessorInterface, OutboundPathProcessorInterface {
 
   /**
    * {@inheritdoc}
@@ -21,7 +21,7 @@ class DcDiscussionPathProcessor implements InboundPathProcessorInterface, Outbou
   public function processInbound($path, Request $request) {
     // Process path "diskussion/starten".
     if ($path == "/diskussion/starten") {
-      $path = "/node/add/discussion";
+      $path = "/node/add/forum";
     }
 
     // Process path "diskussion/[nid]/bearbeiten".
@@ -42,8 +42,8 @@ class DcDiscussionPathProcessor implements InboundPathProcessorInterface, Outbou
    * {@inheritdoc}
    */
   public function processOutbound($path, &$options = array(), Request $request = NULL, BubbleableMetadata $bubbleable_metadata = NULL) {
-    // Rewrite path "node/add/discussion".
-    if ($path == "/node/add/discussion") {
+    // Rewrite path "node/add/forum".
+    if ($path == "/node/add/forum") {
       $path = "/diskussion/starten";
     }
 
@@ -51,7 +51,7 @@ class DcDiscussionPathProcessor implements InboundPathProcessorInterface, Outbou
     if (preg_match('|^/node/([0-9]*)/edit(/.*)?|', $path, $matches)) {
       // We have to load node object to retrieve actual type.
       $node = Node::load($matches[1]);
-      if ($node->bundle() == 'discussion') {
+      if ($node->bundle() == 'forum') {
         $path = '/diskussion/' . $matches[1] . '/bearbeiten';
       }
     }
@@ -60,7 +60,7 @@ class DcDiscussionPathProcessor implements InboundPathProcessorInterface, Outbou
     if (preg_match('|^/node/([0-9]*)/discussion_answer(/.*)?|', $path, $matches)) {
       // We have to load node object to retrieve actual type.
       $node = Node::load($matches[1]);
-      if ($node->bundle() == 'discussion') {
+      if ($node->bundle() == 'forum') {
         $path = '/diskussion/' . $matches[1] . '/beantworten';
       }
     }

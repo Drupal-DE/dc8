@@ -31,3 +31,19 @@ dc_twocol_stacked_sidebar:
       label: Right side
     bottom:
       label: Bottom
+
+dc_forum:
+  label: Forum
+  category: 'Columns: 2'
+  path: layouts/dc_forum
+  icon: dc_forum.png
+  template: panels-dc-forum
+  regions:
+    top:
+      label: Top
+    body:
+      label: Body
+    bottom:
+      label: Bottom
+    sidebar:
+      label: Sidebar

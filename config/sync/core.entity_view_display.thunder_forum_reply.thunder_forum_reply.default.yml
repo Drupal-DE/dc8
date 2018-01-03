@@ -1,0 +1,45 @@
+uuid: 796d8b87-0f9d-4b60-89ad-e392e472a4cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.thunder_forum_reply.thunder_forum_reply.field_files
+  module:
+    - text
+    - thunder_forum_reply
+id: thunder_forum_reply.thunder_forum_reply.default
+targetEntityType: thunder_forum_reply
+bundle: thunder_forum_reply
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_files:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links_header:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  icon: true
+  langcode: true
+  links_footer: true
+  nid: true
+  uid: true

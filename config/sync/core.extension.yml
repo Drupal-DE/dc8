@@ -24,6 +24,7 @@ module:
   dblog: 0
   dc_discussion: 0
   dc_filter: 0
+  dc_migrate: 0
   dc_placeholder_image: 0
   dc_quote: 0
   dc_ui: 0
@@ -59,6 +60,7 @@ module:
   page_cache: 0
   page_manager: 0
   page_manager_ui: 0
+  panels: 0
   paragraphs_type_permissions: 0
   path: 0
   responsive_image: 0
@@ -71,6 +73,7 @@ module:
   thunder_forum_reply_history: 0
   token: 0
   toolbar: 0
+  up_migrate: 0
   update: 0
   user: 0
   views_block_filter_block: 0

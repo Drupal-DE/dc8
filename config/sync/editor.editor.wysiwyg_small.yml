@@ -1,0 +1,80 @@
+uuid: 66f1f44b-3b16-4a0b-9db2-9f1ffe147a94
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg_small
+  module:
+    - ckeditor
+format: wysiwyg_small
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Tools
+          items:
+            - CodeSnippet
+            - Source
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+    codesnippet:
+      highlight_style: github
+      highlight_languages:
+        bash: bash
+        css: css
+        diff: diff
+        html: html
+        ini: ini
+        json: json
+        javascript: javascript
+        makefile: makefile
+        php: php
+        sql: sql
+        xhtml: xhtml
+        xml: xml
+        apache: 0
+        cs: 0
+        cpp: 0
+        coffeescript: 0
+        http: 0
+        java: 0
+        markdown: 0
+        nginx: 0
+        objectivec: 0
+        perl: 0
+        python: 0
+        ruby: 0
+        vbscript: 0
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

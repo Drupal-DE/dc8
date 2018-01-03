@@ -1,9 +1,9 @@
-uuid: 60c0aece-697e-4c0a-ade6-15efe25534bd
+uuid: d85badc1-2c07-459a-89ea-ae4cc6bbfd92
 langcode: de
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.list_teaser
     - field.field.node.forum.body
     - field.field.node.forum.field_drupal_version
     - field.field.node.forum.field_files
@@ -11,38 +11,37 @@ dependencies:
     - field.field.node.forum.taxonomy_forums
     - node.type.forum
   module:
+    - dc_ui
     - user
 _core:
   default_config_hash: TM_8DV1XKUAtF-wGxTBLOtg_GTtF5CX9WLrADxG7Xm4
-id: node.forum.full
+id: node.forum.list_teaser
 targetEntityType: node
 bundle: forum
-mode: full
+mode: list_teaser
 content:
   created:
     label: hidden
     type: timestamp
-    weight: 2
+    weight: 1
     region: content
     settings:
       date_format: medium
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
-  thunder_forum_links_footer:
-    weight: 3
+  taxonomy_forums:
+    type: dc_ui_term_reference_colored
+    weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  thunder_forum_links_header:
-    weight: 0
-    region: content
-    settings: {  }
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
   uid:
     label: hidden
     type: author
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -55,4 +54,5 @@ hidden:
   icon: true
   langcode: true
   links: true
-  taxonomy_forums: true
+  thunder_forum_links_footer: true
+  thunder_forum_links_header: true

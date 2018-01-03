@@ -1,0 +1,29 @@
+uuid: dbc11de8-76e7-4cce-830c-d3f14e453a28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.thunder_forum_reply.field_files
+    - media_entity.bundle.file
+  module:
+    - thunder_forum_reply
+id: thunder_forum_reply.thunder_forum_reply.field_files
+field_name: field_files
+entity_type: thunder_forum_reply
+bundle: thunder_forum_reply
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

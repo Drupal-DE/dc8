@@ -280,7 +280,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: dc_ui_discussion_name_colored
+          type: dc_ui_term_name_colored
           settings:
             link_to_entity: 1
           group_column: value
