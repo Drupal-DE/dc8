@@ -3,12 +3,14 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.content_comment.default
     - field.field.node.book.field_comments
     - field.field.node.book.field_content
     - field.field.node.book.field_drupal_version
     - field.field.node.book.field_legacy_content
     - node.type.book
   module:
+    - comment
     - entity_reference_revisions
     - text
     - user
@@ -28,6 +30,15 @@ content:
       date_format: medium
       custom_date_format: ''
       timezone: ''
+    third_party_settings: {  }
+  field_comments:
+    type: comment_default
+    weight: 5
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
     third_party_settings: {  }
   field_content:
     type: entity_reference_revisions_entity_view
@@ -59,6 +70,5 @@ content:
     third_party_settings: {  }
 hidden:
   changed: true
-  field_comments: true
   field_drupal_version: true
   langcode: true
