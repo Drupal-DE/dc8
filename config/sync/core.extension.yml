@@ -76,6 +76,7 @@ module:
   up_migrate: 0
   update: 0
   user: 0
+  user_restrictions: 0
   views_block_filter_block: 0
   views_ui: 0
   forum: 1

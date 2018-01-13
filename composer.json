@@ -188,7 +188,7 @@
                 "Page Manager paths should support optional arguments as well [#2810329]": "https://www.drupal.org/files/issues/allow_optional_parameters-2810329-3.patch"
             },
             "drupal/user_restrictions": {
-                "Various D8 issues [#2889974]": "https://www.drupal.org/files/issues/user_restrictions-2889974-2-various-d8-fixes.patch"
+                "Massive refactoring / introduce plugins [#2936400]": "https://www.drupal.org/files/issues/user_restrictions-refactoring_plugins-2936400-3.patch"
             }
         }
     },
