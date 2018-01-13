@@ -1,0 +1,10 @@
+uuid: 4f286200-10e1-4ed9-9219-d220d0c2fc34
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__42
+label: 'Access rule 42'
+pattern: '%@yeah.net'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

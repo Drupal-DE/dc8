@@ -1,0 +1,10 @@
+uuid: e308bea0-986a-497c-b751-839cad4138d0
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__24
+label: 'Access rule 24'
+pattern: 79.193.227.86
+access_type: '0'
+rule_type: client_ip
+expiry: 2147483647

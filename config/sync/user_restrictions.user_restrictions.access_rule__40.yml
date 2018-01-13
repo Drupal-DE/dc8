@@ -1,0 +1,10 @@
+uuid: 2783ca81-0df4-413b-9674-247e10e5a9fb
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__40
+label: 'Access rule 40'
+pattern: '%@qq.com'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

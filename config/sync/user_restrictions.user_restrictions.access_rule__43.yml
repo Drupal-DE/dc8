@@ -1,0 +1,10 @@
+uuid: 0e5ce409-066c-4ac9-8fc2-2f80da335eee
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__43
+label: 'Access rule 43'
+pattern: newzheng%
+access_type: '0'
+rule_type: name
+expiry: 2147483647

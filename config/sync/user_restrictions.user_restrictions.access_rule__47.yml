@@ -1,0 +1,10 @@
+uuid: 378d523c-4c4f-4938-a9ec-d6bc5ee6d0f2
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__47
+label: 'Access rule 47'
+pattern: '%.xyz'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

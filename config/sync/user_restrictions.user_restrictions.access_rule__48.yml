@@ -1,0 +1,10 @@
+uuid: 1e743138-6c91-486e-99b3-125650058b72
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__48
+label: 'Access rule 48'
+pattern: '%.abc'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

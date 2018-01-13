@@ -1,0 +1,10 @@
+uuid: 596d549b-3576-4727-9248-d118efc63e3a
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__45
+label: 'Access rule 45'
+pattern: 176.33.112.99
+access_type: '0'
+rule_type: client_ip
+expiry: 2147483647

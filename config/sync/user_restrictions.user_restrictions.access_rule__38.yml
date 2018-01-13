@@ -1,0 +1,10 @@
+uuid: 603bd53e-b10b-42b3-b709-00090e60216c
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__38
+label: 'Access rule 38'
+pattern: '%@126.com'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

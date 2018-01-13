@@ -1,0 +1,10 @@
+uuid: 19f81da1-4c37-4919-adcf-9357852929f6
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__36
+label: 'Access rule 36'
+pattern: '%@sohu.com'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

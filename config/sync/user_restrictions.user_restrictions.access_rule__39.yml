@@ -1,0 +1,10 @@
+uuid: 51cf435e-e4c8-4cb5-b2a2-605062ddc073
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__39
+label: 'Access rule 39'
+pattern: '%@sina.%'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

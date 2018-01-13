@@ -1,0 +1,10 @@
+uuid: 84b5036f-465e-4fee-947d-3345849bca7e
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__5
+label: 'Access rule 5'
+pattern: '%bjoern%voss%'
+access_type: '0'
+rule_type: name
+expiry: 2147483647

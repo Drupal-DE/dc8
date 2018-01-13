@@ -1,0 +1,10 @@
+uuid: 38599bc8-eff8-4a9b-95a1-e01d8d240701
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__46
+label: 'Access rule 46'
+pattern: 195.206.253.146
+access_type: '0'
+rule_type: client_ip
+expiry: 2147483647

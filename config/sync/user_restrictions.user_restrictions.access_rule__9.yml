@@ -1,0 +1,10 @@
+uuid: e00d37a7-4a18-4c10-abd3-2a02e194ae99
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__9
+label: 'Access rule 9'
+pattern: '%ru'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

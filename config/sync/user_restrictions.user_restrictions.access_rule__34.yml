@@ -1,0 +1,10 @@
+uuid: 4b96500c-01f9-47d0-b138-602e546c48f6
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__34
+label: 'Access rule 34'
+pattern: '%live.cn'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

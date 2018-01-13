@@ -1,0 +1,10 @@
+uuid: 17e72892-289a-4731-ad32-73266873ae2f
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__28
+label: 'Access rule 28'
+pattern: turrican03@jabber.ccc.de
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

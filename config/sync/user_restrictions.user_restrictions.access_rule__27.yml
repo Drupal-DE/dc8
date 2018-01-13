@@ -1,0 +1,10 @@
+uuid: dc0bc691-5fd4-47dc-b896-24c8ad1e74e7
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__27
+label: 'Access rule 27'
+pattern: 85.2.72.152
+access_type: '0'
+rule_type: client_ip
+expiry: 2147483647

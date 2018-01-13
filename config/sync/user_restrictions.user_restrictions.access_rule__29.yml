@@ -1,0 +1,10 @@
+uuid: 59a7959f-1ebd-401e-a88e-06c6910826ca
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__29
+label: 'Access rule 29'
+pattern: mseidel@lugmoe.de
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

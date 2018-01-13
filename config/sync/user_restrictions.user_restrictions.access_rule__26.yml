@@ -1,0 +1,10 @@
+uuid: bebb3b43-c55e-4102-b801-43e1a470885e
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__26
+label: 'Access rule 26'
+pattern: '%@brainstuff.com'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647

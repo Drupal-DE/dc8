@@ -1,0 +1,10 @@
+uuid: 2220e995-200d-44e1-86ae-a9cd780fe344
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__44
+label: 'Access rule 44'
+pattern: 27.159.236.201
+access_type: '0'
+rule_type: client_ip
+expiry: 2147483647

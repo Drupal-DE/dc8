@@ -1,0 +1,10 @@
+uuid: ccbf17f7-1783-40b8-9d49-7fe3e5d1b29c
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__25
+label: 'Access rule 25'
+pattern: 85.0.103.223
+access_type: '0'
+rule_type: client_ip
+expiry: 2147483647

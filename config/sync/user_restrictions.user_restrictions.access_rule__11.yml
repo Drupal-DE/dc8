@@ -1,0 +1,10 @@
+uuid: dab56610-86d9-4f47-bef8-0e8b2886b67f
+langcode: de
+status: true
+dependencies: {  }
+name: access_rule__11
+label: 'Access rule 11'
+pattern: '%sdial.biz'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647
