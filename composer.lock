@@ -123,16 +123,16 @@
             "time": "2017-04-11T20:03:41+00:00"
         },
         {
-            "name": "burdamagazinorg/thunder-community",
+            "name": "stborchert/thunder-community",
             "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "git@github.com:BurdaMagazinOrg/thunder-community.git",
+                "url": "git@github.com:stborchert/thunder-community.git",
                 "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BurdaMagazinOrg/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
+                "url": "https://api.github.com/repos/stborchert/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
                 "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff",
                 "shasum": ""
             },
@@ -157,8 +157,8 @@
             },
             "description": "Provides commmunity components for the Thunder distribution.",
             "support": {
-                "source": "https://github.com/BurdaMagazinOrg/thunder-community/tree/8.x-1.x",
-                "issues": "https://github.com/BurdaMagazinOrg/thunder-community/issues"
+                "source": "https://github.com/stborchert/thunder-community/tree/8.x-1.x",
+                "issues": "https://github.com/stborchert/thunder-community/issues"
             },
             "time": "2017-07-18 13:21:26"
         },

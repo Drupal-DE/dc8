@@ -19,9 +19,9 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "name": "burdamagazinorg/thunder-community",
+            "name": "stborchert/thunder-community",
             "type": "vcs",
-            "url": "https://github.com/BurdaMagazinOrg/thunder-community.git"
+            "url": "https://github.com/stborchert/thunder-community.git"
         },
         {
             "type": "vcs",
@@ -90,7 +90,6 @@
          }
     ],
     "require": {
-        "burdamagazinorg/thunder-community": "dev-8.x-1.x",
         "ckeditor/codesnippet": "^4.6",
         "ckeditor/codetag": "^0.1.0",
         "composer/installers": "^1.0",
@@ -130,6 +129,7 @@
         "drupalcenter/dc-migrate": "dev-8.x-4.x",
         "drush/drush": "8.1.15",
         "harvesthq/chosen": "^1.6",
+        "stborchert/thunder-community": "dev-8.x-1.x",
         "undpaul/up-migrate": "dev-8.x-3.x"
     },
     "conflict": {
