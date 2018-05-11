@@ -123,6 +123,46 @@
             "time": "2017-04-11T20:03:41+00:00"
         },
         {
+            "name": "burdamagazinorg/thunder-community",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stborchert/thunder-community.git",
+                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stborchert/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
+                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff",
+                "shasum": ""
+            },
+            "require": {
+                "cweagans/composer-patches": "~1.0",
+                "drupal/core": "^8.0",
+                "drupal/flag": "^4.0",
+                "drupal/message": "1.x-dev",
+                "drupal/message_history": "1.x-dev",
+                "drupal/message_ui": "1.x-dev",
+                "drupal/pach": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/message_ui": {
+                        "buildPermissions single quotes string replacement fails [#2874976]": "https://www.drupal.org/files/issues/message_ui-permissions-2874976-4.patch",
+                        "Fix error on installation with non-existing config [#2886830]": "https://www.drupal.org/files/issues/message_ui-config_install-2886830-2.patch",
+                        "Object of class Drupal\\message\\Entity\\MessageTemplate could not be converted to string in Drupal\\syslog\\Logger\\SysLog->log() [#2894234]": "https://www.drupal.org/files/issues/object_of_class-2894234-2.patch"
+                    }
+                }
+            },
+            "description": "Provides commmunity components for the Thunder distribution.",
+            "support": {
+                "source": "https://github.com/stborchert/thunder-community/tree/8.x-1.x",
+                "issues": "https://github.com/stborchert/thunder-community/issues"
+            },
+            "time": "2017-07-18T13:21:26+00:00"
+        },
+        {
             "name": "ckeditor/codesnippet",
             "version": "4.6.2",
             "dist": {
@@ -637,16 +677,16 @@
         },
         {
             "name": "cweagans/composer-patches",
-            "version": "1.6.2",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "014e968ca2ce4342476b3f2f6779b274fff8ae9e"
+                "reference": "462e65061606dc6149349535d4322241515d1b16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/014e968ca2ce4342476b3f2f6779b274fff8ae9e",
-                "reference": "014e968ca2ce4342476b3f2f6779b274fff8ae9e",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/462e65061606dc6149349535d4322241515d1b16",
+                "reference": "462e65061606dc6149349535d4322241515d1b16",
                 "shasum": ""
             },
             "require": {
@@ -677,7 +717,7 @@
                 }
             ],
             "description": "Provides a way to patch Composer packages.",
-            "time": "2017-08-30T16:41:23+00:00"
+            "time": "2017-12-07T16:16:31+00:00"
         },
         {
             "name": "dflydev/dot-access-configuration",
@@ -3092,7 +3132,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/message_ui",
-                "reference": "8301f0f50e4bc122e9ee0668bff0e4ce6d8746aa"
+                "reference": "1f4da6b8c43927c935fe257c01cbde2eafd526be"
             },
             "require": {
                 "drupal/coder": "^8.2",
@@ -3109,16 +3149,14 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta1+1-dev",
-                    "datestamp": "1506362043",
+                    "version": "8.x-1.0-beta1+3-dev",
+                    "datestamp": "1518260580",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "patches_applied": {
-                    "buildPermissions single quotes string replacement fails [#2874976]": "https://www.drupal.org/files/issues/message_ui-permissions-2874976-4.patch",
-                    "Fix error on installation with non-existing config [#2886830]": "https://www.drupal.org/files/issues/message_ui-config_install-2886830-2.patch",
                     "Object of class Drupal\\message\\Entity\\MessageTemplate could not be converted to string in Drupal\\syslog\\Logger\\SysLog->log() [#2894234]": "https://www.drupal.org/files/issues/object_of_class-2894234-2.patch"
                 }
             },
@@ -3141,7 +3179,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/message_ui"
             },
-            "time": "2017-05-03T19:54:36+00:00"
+            "time": "2018-02-10T11:01:21+00:00"
         },
         {
             "name": "drupal/metatag",
@@ -3271,6 +3309,12 @@
                 "url": "https://git.drupal.org/sandbox/stborchert/2808617.git",
                 "reference": "ad4773cca709662bbb4878f0959c4ea0eb715e63"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Drupal-DE/migrate_source_yaml/zipball/ad4773cca709662bbb4878f0959c4ea0eb715e63",
+                "reference": "ad4773cca709662bbb4878f0959c4ea0eb715e63",
+                "shasum": ""
+            },
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
@@ -3283,6 +3327,10 @@
                 }
             ],
             "description": "YAML migration source and dataparser.",
+            "support": {
+                "source": "https://github.com/Drupal-DE/migrate_source_yaml/tree/8.x-1.x",
+                "issues": "https://github.com/Drupal-DE/migrate_source_yaml/issues"
+            },
             "time": "2016-10-27T09:29:24+00:00"
         },
         {
@@ -3360,7 +3408,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0",
-                    "datestamp": "1497964742",
+                    "datestamp": "1520837884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3983,8 +4031,7 @@
             },
             "type": "drupal-module",
             "support": {
-                "source": "https://github.com/stborchert/views_lazy_load/tree/8.x-1.x",
-                "issues": "https://github.com/stborchert/views_lazy_load/issues"
+                "source": "https://github.com/Drupal-DE/views_lazy_load/tree/8.x-1.x"
             },
             "time": "2017-01-13T08:11:48+00:00"
         },
