@@ -19,29 +19,29 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "name": "stborchert/thunder-community",
+            "name": "burdamagazinorg/thunder-community",
             "type": "vcs",
-            "url": "https://github.com/stborchert/thunder-community.git"
+            "url": "https://github.com/Drupal-DE/thunder-community.git"
         },
         {
             "type": "vcs",
             "name": "undpaul/up-migrate",
-            "url": "https://github.com/undpaul/up-migrate.git"
+            "url": "https://github.com/Drupal-DE/up-migrate.git"
         },
         {
             "type": "vcs",
             "name": "drupal/migrate_source_yaml",
-            "url": "https://git.drupal.org/sandbox/stborchert/2808617.git"
+            "url": "https://github.com/Drupal-DE/migrate_source_yaml.git"
         },
         {
             "type": "vcs",
             "name": "drupalcenter/dc-migrate",
-            "url": "https://github.com/stborchert/dc-migrate.git"
+            "url": "https://github.com/Drupal-DE/dc-migrate.git"
         },
         {
             "type": "vcs",
             "name": "drupal/views_lazy_load",
-            "url": "https://github.com/stborchert/views_lazy_load"
+            "url": "https://github.com/Drupal-DE/views_lazy_load.git"
         },
         {
             "type": "package",
@@ -129,7 +129,7 @@
         "drupalcenter/dc-migrate": "dev-8.x-4.x",
         "drush/drush": "8.1.15",
         "harvesthq/chosen": "^1.6",
-        "stborchert/thunder-community": "dev-8.x-1.x",
+        "burdamagazinorg/thunder-community": "dev-8.x-1.x",
         "undpaul/up-migrate": "dev-8.x-3.x"
     },
     "conflict": {
@@ -162,7 +162,6 @@
             "8.x-3.x": "3.x-dev"
         },
         "installer-paths": {
-            "docroot/modules/thunder-community": ["burdamagazinorg/thunder-community"],
             "docroot/core": ["type:drupal-core"],
             "docroot/modules/contrib/{$name}": ["type:drupal-module"],
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "003de4b9e2e11d9f5dfc19b3034f92a0",
+    "content-hash": "c8241d8762802c9d7c8919ce0c946892",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -127,13 +127,13 @@
             "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://github.com/stborchert/thunder-community.git",
-                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff"
+                "url": "https://github.com/Drupal-DE/thunder-community.git",
+                "reference": "fd721e6cb1b9ac7234e3f7aefc764da80d336786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stborchert/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
-                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff",
+                "url": "https://api.github.com/repos/Drupal-DE/thunder-community/zipball/fd721e6cb1b9ac7234e3f7aefc764da80d336786",
+                "reference": "fd721e6cb1b9ac7234e3f7aefc764da80d336786",
                 "shasum": ""
             },
             "require": {
@@ -149,18 +149,15 @@
             "extra": {
                 "patches": {
                     "drupal/message_ui": {
-                        "buildPermissions single quotes string replacement fails [#2874976]": "https://www.drupal.org/files/issues/message_ui-permissions-2874976-4.patch",
-                        "Fix error on installation with non-existing config [#2886830]": "https://www.drupal.org/files/issues/message_ui-config_install-2886830-2.patch",
                         "Object of class Drupal\\message\\Entity\\MessageTemplate could not be converted to string in Drupal\\syslog\\Logger\\SysLog->log() [#2894234]": "https://www.drupal.org/files/issues/object_of_class-2894234-2.patch"
                     }
                 }
             },
             "description": "Provides commmunity components for the Thunder distribution.",
             "support": {
-                "source": "https://github.com/stborchert/thunder-community/tree/8.x-1.x",
-                "issues": "https://github.com/stborchert/thunder-community/issues"
+                "source": "https://github.com/Drupal-DE/thunder-community/tree/8.x-1.x"
             },
-            "time": "2017-07-18T13:21:26+00:00"
+            "time": "2018-05-11T08:00:02+00:00"
         },
         {
             "name": "ckeditor/codesnippet",
@@ -3178,8 +3175,7 @@
             "homepage": "https://www.drupal.org/project/message_ui",
             "support": {
                 "source": "http://cgit.drupalcode.org/message_ui"
-            },
-            "time": "2018-02-10T11:01:21+00:00"
+            }
         },
         {
             "name": "drupal/metatag",
@@ -3306,7 +3302,7 @@
             "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/sandbox/stborchert/2808617.git",
+                "url": "https://github.com/Drupal-DE/migrate_source_yaml.git",
                 "reference": "ad4773cca709662bbb4878f0959c4ea0eb715e63"
             },
             "dist": {
@@ -4020,12 +4016,12 @@
             "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://github.com/stborchert/views_lazy_load.git",
+                "url": "https://github.com/Drupal-DE/views_lazy_load.git",
                 "reference": "5909e4b290f8876fba64f40706be73b79b1cecf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stborchert/views_lazy_load/zipball/5909e4b290f8876fba64f40706be73b79b1cecf9",
+                "url": "https://api.github.com/repos/Drupal-DE/views_lazy_load/zipball/5909e4b290f8876fba64f40706be73b79b1cecf9",
                 "reference": "5909e4b290f8876fba64f40706be73b79b1cecf9",
                 "shasum": ""
             },
@@ -4040,12 +4036,12 @@
             "version": "dev-8.x-4.x",
             "source": {
                 "type": "git",
-                "url": "https://github.com/stborchert/dc-migrate.git",
+                "url": "https://github.com/Drupal-DE/dc-migrate.git",
                 "reference": "554063499462734c7e28db42a52305de4ff217d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stborchert/dc-migrate/zipball/554063499462734c7e28db42a52305de4ff217d3",
+                "url": "https://api.github.com/repos/Drupal-DE/dc-migrate/zipball/554063499462734c7e28db42a52305de4ff217d3",
                 "reference": "554063499462734c7e28db42a52305de4ff217d3",
                 "shasum": ""
             },
@@ -5498,46 +5494,6 @@
                 "stack"
             ],
             "time": "2016-06-02T06:58:42+00:00"
-        },
-        {
-            "name": "stborchert/thunder-community",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:stborchert/thunder-community.git",
-                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stborchert/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
-                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff",
-                "shasum": ""
-            },
-            "require": {
-                "cweagans/composer-patches": "~1.0",
-                "drupal/core": "^8.0",
-                "drupal/flag": "^4.0",
-                "drupal/message": "1.x-dev",
-                "drupal/message_history": "1.x-dev",
-                "drupal/message_ui": "1.x-dev",
-                "drupal/pach": "^1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "patches": {
-                    "drupal/message_ui": {
-                        "buildPermissions single quotes string replacement fails [#2874976]": "https://www.drupal.org/files/issues/message_ui-permissions-2874976-4.patch",
-                        "Fix error on installation with non-existing config [#2886830]": "https://www.drupal.org/files/issues/message_ui-config_install-2886830-2.patch",
-                        "Object of class Drupal\\message\\Entity\\MessageTemplate could not be converted to string in Drupal\\syslog\\Logger\\SysLog->log() [#2894234]": "https://www.drupal.org/files/issues/object_of_class-2894234-2.patch"
-                    }
-                }
-            },
-            "description": "Provides commmunity components for the Thunder distribution.",
-            "support": {
-                "source": "https://github.com/stborchert/thunder-community/tree/8.x-1.x",
-                "issues": "https://github.com/stborchert/thunder-community/issues"
-            },
-            "time": "2017-07-18T13:21:26+00:00"
         },
         {
             "name": "stecman/symfony-console-completion",
@@ -7226,12 +7182,12 @@
             "version": "dev-8.x-3.x",
             "source": {
                 "type": "git",
-                "url": "https://github.com/undpaul/up-migrate.git",
+                "url": "https://github.com/Drupal-DE/up-migrate.git",
                 "reference": "d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/undpaul/up-migrate/zipball/d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b",
+                "url": "https://api.github.com/repos/Drupal-DE/up-migrate/zipball/d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b",
                 "reference": "d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b",
                 "shasum": ""
             },
@@ -7657,7 +7613,7 @@
         "drupal/views_block_filter_block": 20,
         "drupal/views_lazy_load": 20,
         "drupalcenter/dc-migrate": 20,
-        "stborchert/thunder-community": 20,
+        "burdamagazinorg/thunder-community": 20,
         "undpaul/up-migrate": 20
     },
     "prefer-stable": true,
