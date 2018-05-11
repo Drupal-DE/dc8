@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c6d3864ddbfc1153f66641dc46655d1",
+    "content-hash": "003de4b9e2e11d9f5dfc19b3034f92a0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -121,46 +121,6 @@
                 "stack"
             ],
             "time": "2017-04-11T20:03:41+00:00"
-        },
-        {
-            "name": "stborchert/thunder-community",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:stborchert/thunder-community.git",
-                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stborchert/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
-                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff",
-                "shasum": ""
-            },
-            "require": {
-                "cweagans/composer-patches": "~1.0",
-                "drupal/core": "^8.0",
-                "drupal/flag": "^4.0",
-                "drupal/message": "1.x-dev",
-                "drupal/message_history": "1.x-dev",
-                "drupal/message_ui": "1.x-dev",
-                "drupal/pach": "^1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "patches": {
-                    "drupal/message_ui": {
-                        "buildPermissions single quotes string replacement fails [#2874976]": "https://www.drupal.org/files/issues/message_ui-permissions-2874976-4.patch",
-                        "Fix error on installation with non-existing config [#2886830]": "https://www.drupal.org/files/issues/message_ui-config_install-2886830-2.patch",
-                        "Object of class Drupal\\message\\Entity\\MessageTemplate could not be converted to string in Drupal\\syslog\\Logger\\SysLog->log() [#2894234]": "https://www.drupal.org/files/issues/object_of_class-2894234-2.patch"
-                    }
-                }
-            },
-            "description": "Provides commmunity components for the Thunder distribution.",
-            "support": {
-                "source": "https://github.com/stborchert/thunder-community/tree/8.x-1.x",
-                "issues": "https://github.com/stborchert/thunder-community/issues"
-            },
-            "time": "2017-07-18 13:21:26"
         },
         {
             "name": "ckeditor/codesnippet",
@@ -1475,7 +1435,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/allowed_formats"
             },
-            "time": "2017-05-11 15:50:28"
+            "time": "2017-05-11T15:50:28+00:00"
         },
         {
             "name": "drupal/block_visibility_groups",
@@ -1606,7 +1566,7 @@
                 "source": "https://drupal.org/project/chosen",
                 "issues": "https://drupal.org/project/issues/chosen"
             },
-            "time": "2017-09-20 14:39:27"
+            "time": "2017-09-20T14:39:27+00:00"
         },
         {
             "name": "drupal/chosen_lib",
@@ -1753,7 +1713,7 @@
                 "source": "http://cgit.drupalcode.org/codesnippet",
                 "issues": "http://drupal.org/project/issues/codesnippet"
             },
-            "time": "2016-09-20 13:53:48"
+            "time": "2016-09-20T13:53:48+00:00"
         },
         {
             "name": "drupal/codetag",
@@ -1805,7 +1765,7 @@
                 "source": "http://cgit.drupalcode.org/codetag",
                 "issues": "http://drupal.org/project/issues/codetag"
             },
-            "time": "2016-09-15 15:25:19"
+            "time": "2016-09-15T15:25:19+00:00"
         },
         {
             "name": "drupal/console",
@@ -2435,7 +2395,7 @@
                 "source": "http://cgit.drupalcode.org/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
             },
-            "time": "2017-07-11 17:46:05"
+            "time": "2017-07-11T17:46:05+00:00"
         },
         {
             "name": "drupal/entity",
@@ -2608,7 +2568,7 @@
                 "source": "http://cgit.drupalcode.org/fac",
                 "issues": "http://drupal.org/project/issues/fac"
             },
-            "time": "2017-09-28 16:23:47"
+            "time": "2017-09-28T16:23:47+00:00"
         },
         {
             "name": "drupal/field_group",
@@ -2666,7 +2626,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13 21:36:25"
+            "time": "2017-07-13T21:36:25+00:00"
         },
         {
             "name": "drupal/flag",
@@ -2736,7 +2696,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/flag"
             },
-            "time": "2017-11-02 00:36:04"
+            "time": "2017-11-02T00:36:04+00:00"
         },
         {
             "name": "drupal/focal_point",
@@ -2782,7 +2742,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/focal_point"
             },
-            "time": "2017-11-03 14:23:15"
+            "time": "2017-11-03T14:23:15+00:00"
         },
         {
             "name": "drupal/inline_entity_form",
@@ -3079,7 +3039,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/message"
             },
-            "time": "2017-08-15 21:27:39"
+            "time": "2017-08-15T21:27:39+00:00"
         },
         {
             "name": "drupal/message_history",
@@ -3124,7 +3084,7 @@
                 "source": "https://cgit.drupalcode.org/message_history",
                 "issues": "https://drupal.org/project/issues/message_history"
             },
-            "time": "2017-06-23 13:01:37"
+            "time": "2017-06-23T13:01:37+00:00"
         },
         {
             "name": "drupal/message_ui",
@@ -3181,7 +3141,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/message_ui"
             },
-            "time": "2017-05-03 19:54:36"
+            "time": "2017-05-03T19:54:36+00:00"
         },
         {
             "name": "drupal/metatag",
@@ -3301,7 +3261,7 @@
                 "issues": "https://www.drupal.org/project/issues/migrate_plus",
                 "irc": "irc://irc.freenode.org/drupal-migrate"
             },
-            "time": "2017-05-10 13:45:55"
+            "time": "2017-05-10T13:45:55+00:00"
         },
         {
             "name": "drupal/migrate_source_yaml",
@@ -3323,7 +3283,7 @@
                 }
             ],
             "description": "YAML migration source and dataparser.",
-            "time": "2016-10-27 09:29:24"
+            "time": "2016-10-27T09:29:24+00:00"
         },
         {
             "name": "drupal/migrate_tools",
@@ -3374,7 +3334,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/migrate_tools"
             },
-            "time": "2017-07-12 15:50:55"
+            "time": "2017-07-12T15:50:55+00:00"
         },
         {
             "name": "drupal/pach",
@@ -3485,7 +3445,7 @@
                 "issues": "https://www.drupal.org/project/issues/page_manager",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "time": "2017-08-26 23:12:05"
+            "time": "2017-08-26T23:12:05+00:00"
         },
         {
             "name": "drupal/panels",
@@ -3565,7 +3525,7 @@
                 "issues": "https://www.drupal.org/project/issues/panels",
                 "irc": "irc://irc.freenode.org/drupal-scotch"
             },
-            "time": "2017-10-02 23:20:18"
+            "time": "2017-10-02T23:20:18+00:00"
         },
         {
             "name": "drupal/paragraphs",
@@ -3694,7 +3654,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
             },
-            "time": "2017-08-23 20:51:31"
+            "time": "2017-08-23T20:51:31+00:00"
         },
         {
             "name": "drupal/search_api",
@@ -3750,7 +3710,7 @@
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
             },
-            "time": "2017-11-03 18:05:24"
+            "time": "2017-11-03T18:05:24+00:00"
         },
         {
             "name": "drupal/search_api_solr",
@@ -3827,7 +3787,7 @@
                 "issues": "https://www.drupal.org/project/issues/search_api_solr",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
             },
-            "time": "2017-10-25 12:13:24"
+            "time": "2017-10-25T12:13:24+00:00"
         },
         {
             "name": "drupal/token",
@@ -3919,6 +3879,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Massive refactoring / introduce plugins [#2936400]": "https://www.drupal.org/files/issues/user_restrictions-refactoring_plugins-2936400-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3952,7 +3915,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/user_restrictions"
             },
-            "time": "2017-03-14 20:59:57"
+            "time": "2017-03-14T20:59:57+00:00"
         },
         {
             "name": "drupal/views_block_filter_block",
@@ -4002,7 +3965,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_block_filter_block"
             },
-            "time": "2017-10-13 06:53:22"
+            "time": "2017-10-13T06:53:22+00:00"
         },
         {
             "name": "drupal/views_lazy_load",
@@ -4023,7 +3986,7 @@
                 "source": "https://github.com/stborchert/views_lazy_load/tree/8.x-1.x",
                 "issues": "https://github.com/stborchert/views_lazy_load/issues"
             },
-            "time": "2017-01-13 08:11:48"
+            "time": "2017-01-13T08:11:48+00:00"
         },
         {
             "name": "drupalcenter/dc-migrate",
@@ -4031,24 +3994,38 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stborchert/dc-migrate.git",
-                "reference": "a92f5a653a5936a492be0afff15f203188e6a082"
+                "reference": "554063499462734c7e28db42a52305de4ff217d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stborchert/dc-migrate/zipball/a92f5a653a5936a492be0afff15f203188e6a082",
-                "reference": "a92f5a653a5936a492be0afff15f203188e6a082",
+                "url": "https://api.github.com/repos/stborchert/dc-migrate/zipball/554063499462734c7e28db42a52305de4ff217d3",
+                "reference": "554063499462734c7e28db42a52305de4ff217d3",
                 "shasum": ""
             },
+            "require": {
+                "undpaul/up-migrate": "dev-8.x-3.x"
+            },
             "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "8.x-3.x": "3.x-dev"
+                }
+            },
             "license": [
                 "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Borchert",
+                    "email": "stefan@undpaul.de"
+                }
             ],
             "description": "Provides migrations for DrupalCenter",
             "support": {
                 "source": "https://github.com/stborchert/dc-migrate/tree/8.x-4.x",
                 "issues": "https://github.com/stborchert/dc-migrate/issues"
             },
-            "time": "2017-11-10 10:05:02"
+            "time": "2018-01-14T10:12:31+00:00"
         },
         {
             "name": "drush/drush",
@@ -5474,6 +5451,46 @@
                 "stack"
             ],
             "time": "2016-06-02T06:58:42+00:00"
+        },
+        {
+            "name": "stborchert/thunder-community",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:stborchert/thunder-community.git",
+                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stborchert/thunder-community/zipball/03069641ce130d71cc0fd07cdd078dfbae887dff",
+                "reference": "03069641ce130d71cc0fd07cdd078dfbae887dff",
+                "shasum": ""
+            },
+            "require": {
+                "cweagans/composer-patches": "~1.0",
+                "drupal/core": "^8.0",
+                "drupal/flag": "^4.0",
+                "drupal/message": "1.x-dev",
+                "drupal/message_history": "1.x-dev",
+                "drupal/message_ui": "1.x-dev",
+                "drupal/pach": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/message_ui": {
+                        "buildPermissions single quotes string replacement fails [#2874976]": "https://www.drupal.org/files/issues/message_ui-permissions-2874976-4.patch",
+                        "Fix error on installation with non-existing config [#2886830]": "https://www.drupal.org/files/issues/message_ui-config_install-2886830-2.patch",
+                        "Object of class Drupal\\message\\Entity\\MessageTemplate could not be converted to string in Drupal\\syslog\\Logger\\SysLog->log() [#2894234]": "https://www.drupal.org/files/issues/object_of_class-2894234-2.patch"
+                    }
+                }
+            },
+            "description": "Provides commmunity components for the Thunder distribution.",
+            "support": {
+                "source": "https://github.com/stborchert/thunder-community/tree/8.x-1.x",
+                "issues": "https://github.com/stborchert/thunder-community/issues"
+            },
+            "time": "2017-07-18T13:21:26+00:00"
         },
         {
             "name": "stecman/symfony-console-completion",
@@ -7163,24 +7180,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/undpaul/up-migrate.git",
-                "reference": "1eb61de21750455a7f89bef0f744bb138973b12a"
+                "reference": "d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/undpaul/up-migrate/zipball/1eb61de21750455a7f89bef0f744bb138973b12a",
-                "reference": "1eb61de21750455a7f89bef0f744bb138973b12a",
+                "url": "https://api.github.com/repos/undpaul/up-migrate/zipball/d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b",
+                "reference": "d3cb9e8a9cc178fda18ec6b42ec2ab8b5dc56c6b",
                 "shasum": ""
             },
             "type": "drupal-module",
             "license": [
-                "GPLv3"
+                "GPL-3.0-only"
             ],
             "description": "Provides some migration plugins and helpers",
             "support": {
                 "source": "https://github.com/undpaul/up-migrate/tree/8.x-3.x",
                 "issues": "https://github.com/undpaul/up-migrate/issues"
             },
-            "time": "2017-11-15 06:27:14"
+            "time": "2018-02-19T16:12:19+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -7572,7 +7589,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "burdamagazinorg/thunder-community": 20,
         "drupal/allowed_formats": 20,
         "drupal/chosen": 20,
         "drupal/codesnippet": 20,
@@ -7594,6 +7610,7 @@
         "drupal/views_block_filter_block": 20,
         "drupal/views_lazy_load": 20,
         "drupalcenter/dc-migrate": 20,
+        "stborchert/thunder-community": 20,
         "undpaul/up-migrate": 20
     },
     "prefer-stable": true,
