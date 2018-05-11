@@ -23,4 +23,6 @@ content:
     weight: 100
     region: content
 hidden:
+  created: true
   langcode: true
+  uid: true

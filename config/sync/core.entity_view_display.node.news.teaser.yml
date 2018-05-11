@@ -12,8 +12,30 @@ targetEntityType: node
 bundle: news
 mode: teaser
 content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
   links:
     weight: 100
     region: content
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  changed: true
+  field_comments: true
+  field_content: true
+  field_legacy_content: true
+  field_news_category: true
   langcode: true

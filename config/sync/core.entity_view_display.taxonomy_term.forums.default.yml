@@ -22,6 +22,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+  term_children:
+    weight: 100
+    region: content
 hidden:
   field_color: true
   forum_container: true

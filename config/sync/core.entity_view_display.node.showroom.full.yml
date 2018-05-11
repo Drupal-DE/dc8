@@ -24,6 +24,16 @@ targetEntityType: node
 bundle: showroom
 mode: full
 content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
   field_comments:
     weight: 5
     label: above
@@ -79,6 +89,14 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  changed: true
   langcode: true
   links: true

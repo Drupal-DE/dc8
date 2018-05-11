@@ -19,6 +19,16 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
   field_comments:
     weight: 4
     label: hidden
@@ -57,5 +67,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  changed: true
   langcode: true
