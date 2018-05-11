@@ -1,0 +1,13 @@
+diff --git a/codetag.install b/codetag.install
+index 60ce882..ef93d46 100644
+--- a/codetag.install
++++ b/codetag.install
+@@ -9,7 +9,7 @@ function codetag_requirements($phase) {
+   $requirements = [];
+ 
+   if ($phase == 'install' || $phase == 'runtime') {
+-    $codetag_detected = file_exists(DRUPAL_ROOT . '/libraries/codeTag/plugin.js');
++    $codetag_detected = file_exists(DRUPAL_ROOT . '/libraries/codetag/plugin.js');
+ 
+     if ($codetag_detected) {
+       $requirements['codetag'] = [
