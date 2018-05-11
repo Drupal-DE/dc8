@@ -110,7 +110,7 @@
         "drupal/flag": "dev-4.x",
         "drupal/focal_point": "dev-1.x",
         "drupal/inline_entity_form": "^1.0",
-        "drupal/media_entity": "1.6",
+        "drupal/media_entity": "^1.6",
         "drupal/media_entity_image": "^1.0",
         "drupal/metatag": "^1.0",
         "drupal/migrate_plus": "dev-3.x",
