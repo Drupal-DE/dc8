@@ -24,7 +24,6 @@ module:
   dblog: 0
   dc_discussion: 0
   dc_filter: 0
-  dc_migrate: 0
   dc_quote: 0
   dc_ui: 0
   dc_user: 0
@@ -50,10 +49,6 @@ module:
   media_entity_actions: 0
   media_entity_generic: 0
   menu_ui: 0
-  migrate: 0
-  migrate_plus: 0
-  migrate_source_yaml: 0
-  migrate_tools: 0
   node: 0
   options: 0
   pach: 0
@@ -71,7 +66,6 @@ module:
   thunder_forum_reply_history: 0
   token: 0
   toolbar: 0
-  up_migrate: 0
   update: 0
   user: 0
   user_restrictions: 0

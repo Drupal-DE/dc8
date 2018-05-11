@@ -1,0 +1,10 @@
+uuid: 2f0b76c0-68a0-4966-9063-9018c7e95d13
+langcode: en
+status: true
+dependencies: {  }
+name: access_rule__50
+label: 'Access rule 50'
+pattern: '%.website'
+access_type: '0'
+rule_type: mail
+expiry: 2147483647
