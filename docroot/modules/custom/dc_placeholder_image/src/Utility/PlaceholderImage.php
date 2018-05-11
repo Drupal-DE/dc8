@@ -8,7 +8,8 @@
 namespace Drupal\dc_placeholder_image\Utility;
 
 use Drupal\file\Entity\File;
-use Drupal\media_entity\Entity\Media;
+use Drupal\media\Entity\Media;
+use Drupal\node\NodeInterface;
 
 /**
  * Service class for creating a placeholder image generation.
@@ -38,7 +39,7 @@ class PlaceholderImage implements PlaceholderImageInterface {
 
     // No file object found - build file object / return it.
     try {
-      /** @var FileSystemthunder_media.module $filesystem */
+      /** @var \Drupal\Core\File\FileSystem $filesystem */
       $filesystem = \Drupal::service('file_system');
       // Create file entity.
       $image = File::create();
@@ -58,7 +59,7 @@ class PlaceholderImage implements PlaceholderImageInterface {
           'bundle' => 'image',
           'uid' => \Drupal::currentUser()->id(),
           'langcode' => \Drupal::languageManager()->getDefaultLanguage()->getId(),
-          'status' => Media::PUBLISHED,
+          'status' => NodeInterface::PUBLISHED,
           'field_image' => [
             'target_id' => $image->id(),
             'alt' => t('Placeholder image'),

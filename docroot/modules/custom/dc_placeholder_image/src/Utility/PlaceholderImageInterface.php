@@ -23,7 +23,7 @@ interface PlaceholderImageInterface {
    * @param string $type
    *   Type can be file or image.
    *
-   * @return FileInterface
+   * @return \Drupal\file\FileInterface
    *   The file entity of the placeholder image.
    */
   public function create($directory , $filename, $type);
