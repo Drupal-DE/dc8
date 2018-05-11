@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eba5f7f35f9caf097e0e81b8c2903a9e",
+    "content-hash": "0908df328faf33d8e831abd9196844bf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7594,6 +7594,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "burdamagazinorg/thunder-community": 20,
         "drupal/allowed_formats": 20,
         "drupal/chosen": 20,
         "drupal/codesnippet": 20,
@@ -7615,7 +7616,6 @@
         "drupal/views_block_filter_block": 20,
         "drupal/views_lazy_load": 20,
         "drupalcenter/dc-migrate": 20,
-        "burdamagazinorg/thunder-community": 20,
         "undpaul/up-migrate": 20
     },
     "prefer-stable": true,

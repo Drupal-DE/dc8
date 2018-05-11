@@ -90,6 +90,7 @@
          }
     ],
     "require": {
+        "burdamagazinorg/thunder-community": "dev-8.x-1.x",
         "ckeditor/codesnippet": "^4.6",
         "ckeditor/codetag": "^0.1.0",
         "composer/installers": "^1.0",
@@ -105,6 +106,7 @@
         "drupal/console": "~1.0",
         "drupal/core": "^8.4",
         "drupal/ctools": "dev-3.x",
+        "drupal/entity": "^1",
         "drupal/fac": "dev-1.x",
         "drupal/field_group": "dev-1.x",
         "drupal/flag": "dev-4.x",
@@ -129,7 +131,6 @@
         "drupalcenter/dc-migrate": "dev-8.x-4.x",
         "drush/drush": "8.1.15",
         "harvesthq/chosen": "^1.6",
-        "burdamagazinorg/thunder-community": "dev-8.x-1.x",
         "undpaul/up-migrate": "dev-8.x-3.x"
     },
     "conflict": {
