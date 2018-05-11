@@ -3383,17 +3383,17 @@
         },
         {
             "name": "drupal/pach",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/pach",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pach-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "5d62096dbfa3ce96c34e885a3a758bb4f3033b68"
+                "url": "https://ftp.drupal.org/files/projects/pach-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "4323794c5434d0c49d021f4c3553d0847cb1ae5a"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3404,7 +3404,7 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
+                    "version": "8.x-1.1",
                     "datestamp": "1520837884",
                     "security-coverage": {
                         "status": "covered",
