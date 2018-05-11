@@ -13,7 +13,7 @@ dependencies:
     - image.style.profile_picture
   module:
     - link
-    - media_entity
+    - media
     - user
 id: user.user.full
 targetEntityType: user

@@ -13,7 +13,7 @@ dependencies:
     - image.style.showroom_teaser
     - node.type.showroom
   module:
-    - media_entity
+    - media
     - user
 id: node.showroom.teaser
 targetEntityType: node

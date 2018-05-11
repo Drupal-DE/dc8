@@ -1,26 +1,6 @@
-label: Media
 display:
   default:
-    display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Apply
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
       fields:
         media_bulk_form:
           action_title: Action
@@ -31,7 +11,7 @@ display:
           label: 'Media name'
           separator: ', '
         bundle:
-          label: Provider
+          label: Type
           separator: ', '
         uid:
           label: Author
@@ -47,23 +27,41 @@ display:
           separator: ', '
         operations:
           label: Operations
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
       filters:
+        name:
+          expose:
+            label: 'Media name'
+        bundle:
+          expose:
+            label: Type
         status:
           expose:
             label: 'True'
           group_info:
-            label: 'Publishing status'
+            label: 'Published status'
             group_items:
               1:
                 title: Published
               2:
                 title: Unpublished
-        bundle:
-          expose:
-            label: Provider
-        name:
-          expose:
-            label: 'Media name'
         langcode:
           expose:
             label: Language
@@ -71,8 +69,10 @@ display:
       empty:
         area_text_custom:
           content: 'No content available.'
+    display_title: Master
   media_page_list:
     display_title: Media
     display_options:
       menu:
         title: Media
+label: Media

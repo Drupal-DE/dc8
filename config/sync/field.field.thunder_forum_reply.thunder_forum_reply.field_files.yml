@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.thunder_forum_reply.field_files
-    - media_entity.bundle.file
+    - media.type.file
   module:
     - thunder_forum_reply
 id: thunder_forum_reply.thunder_forum_reply.field_files

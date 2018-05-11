@@ -41,7 +41,6 @@ display:
           label: 'Changed date'
         count:
           label: 'Used in'
-          format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
       filters:
         filename:
           expose:
@@ -62,7 +61,6 @@ display:
       menu:
         title: Files
   page_2:
-    display_title: 'File usage'
     display_options:
       pager:
         options:
@@ -82,8 +80,6 @@ display:
           label: 'Registering module'
         count:
           label: 'Use count'
-          format_plural_string: !!binary MQNAY291bnQ=
-      title: 'File usage'
       arguments:
         fid:
           exception:

@@ -1,12 +1,15 @@
 uuid: d3650693-5727-433d-a8d7-8a28ab95ecb6
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media_entity_generic
 id: file
 label: File
 description: ''
-type: generic
+source: generic
 queue_thumbnail_downloads: false
 new_revision: false
-type_configuration: {  }
+source_configuration:
+  source_field: field_media_generic
 field_map: {  }

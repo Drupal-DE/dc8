@@ -1,19 +1,18 @@
-uuid: 1ab8fe22-101d-4f21-86b5-77a5d1a0559a
-langcode: en
+uuid: 86c5f151-ef84-4ab4-bd98-b8587ec9a013
+langcode: de
 status: true
 dependencies:
   module:
     - file
     - image
     - media
-id: media.field_image
-field_name: field_image
+id: media.field_media_image
+field_name: field_media_image
 entity_type: media
 type: image
 settings:
-  uri_scheme: public
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null
@@ -21,6 +20,7 @@ settings:
   target_type: file
   display_field: false
   display_default: false
+  uri_scheme: public
 module: image
 locked: false
 cardinality: 1

@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.media.table_row
     - field.field.media.file.field_file
     - image.style.thumbnail
-    - media_entity.bundle.file
+    - media.type.file
   module:
     - file
     - image
@@ -58,4 +58,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_media_generic: true
   langcode: true

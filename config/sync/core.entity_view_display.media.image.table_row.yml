@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.media.table_row
     - field.field.media.image.field_image
     - image.style.profile_picture_small
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - image
 id: media.image.table_row
@@ -25,6 +25,7 @@ content:
     region: content
 hidden:
   created: true
+  field_media_image: true
   langcode: true
   name: true
   thumbnail: true

@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.media.simple_upload
     - field.field.media.file.field_file
-    - media_entity.bundle.file
+    - media.type.file
   module:
     - file
 id: media.file.simple_upload
@@ -20,8 +20,16 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
 hidden:
   created: true
+  field_media_generic: true
   langcode: true
   name: true
   path: true

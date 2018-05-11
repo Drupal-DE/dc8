@@ -17,7 +17,7 @@ dependencies:
     - comment
     - entity_reference_revisions
     - link
-    - media_entity
+    - media
     - user
 id: node.showroom.full
 targetEntityType: node
