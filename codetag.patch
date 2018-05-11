@@ -11,3 +11,25 @@ index 60ce882..ef93d46 100644
  
      if ($codetag_detected) {
        $requirements['codetag'] = [
+diff --git a/src/Plugin/CKEditorPlugin/CodeTag.php b/src/Plugin/CKEditorPlugin/CodeTag.php
+index 8ae947d..9665ff3 100644
+--- a/src/Plugin/CKEditorPlugin/CodeTag.php
++++ b/src/Plugin/CKEditorPlugin/CodeTag.php
+@@ -18,7 +18,7 @@ class CodeTag extends CKEditorPluginBase {
+    * {@inheritdoc}
+    */
+   public function getFile() {
+-    return 'libraries/codeTag/plugin.js';
++    return 'libraries/codetag/plugin.js';
+   }
+ 
+   /**
+@@ -35,7 +35,7 @@ class CodeTag extends CKEditorPluginBase {
+     return array(
+       'Code' => array(
+         'label' => $this->t('CodeTag'),
+-        'image' => 'libraries/codeTag/icons/code.png',
++        'image' => 'libraries/codetag/icons/code.png',
+       ),
+     );
+   }
