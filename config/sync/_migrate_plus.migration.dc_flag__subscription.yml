@@ -1,0 +1,42 @@
+id: dc_flag__suscription
+label: 'Flag: Subscriptions'
+migration_group: drupalcenter
+destination:
+  plugin: 'entity:flagging'
+source:
+  plugin: dc_subscriptions
+  field: nid
+  bundle: forum
+  constants:
+    bundle: thunder_forum_subscription_forum
+    global: false
+    entity_type: node
+process:
+  flag_id: constants/bundle
+  entity_type: constants/entity_type
+  entity_id:
+    -
+      plugin: migration
+      migration: dc_node__forum
+      source: nid
+      no_stub: true
+    -
+      plugin: skip_on_empty
+      method: row
+  global: constants/global
+  uid:
+    -
+      plugin: migration
+      migration: dc_user_accounts
+      source: recipient_uid
+      no_stub: true
+    -
+      plugin: skip_on_empty
+      method: row
+migration_dependencies:
+  optional:
+    - dc_node__forum
+    - dc_user_accounts
+_core:
+  default_config_hash: w8-oePUJkDQMCNh8s4RziKRzin4RkE81ErdYF2vqoc0
+langcode: de
