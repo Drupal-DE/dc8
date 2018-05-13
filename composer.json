@@ -131,7 +131,7 @@
         "drupal/views_block_filter_block": "1.x-dev",
         "drupal/views_lazy_load": "dev-8.x-1.x",
         "drupalcenter/dc-migrate": "dev-8.x-4.x",
-        "drush/drush": "8.1.15",
+        "drush/drush": "^9",
         "harvesthq/chosen": "^1.6",
         "undpaul/up-migrate": "dev-8.x-3.x"
     },
