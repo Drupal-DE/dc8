@@ -64,11 +64,14 @@ display:
       menu:
         title: Comments
         description: 'Comments published'
+      display_description: 'The approved comments listing.'
   page_unapproved:
     display_title: 'Unapproved comments'
     display_options:
       menu:
         title: 'Unapproved comments'
+        description: 'Comments unapproved'
+      display_description: 'The unapproved comments listing.'
       filters:
         subject:
           expose:

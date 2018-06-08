@@ -1,0 +1,23 @@
+mapping:
+  comment_field_data:
+    name: username_anonymizer
+    mail: email_anonymizer
+    homepage: uri_anonymizer
+    hostname: uri_anonymizer
+  user__field_company:
+    field_company_value: text_anonymizer
+  user__field_location:
+    field_location_value: text_anonymizer
+  user__field_name:
+    field_name_value: username_anonymizer
+  user__field_signature:
+    field_signature_format: text_anonymizer
+  user__field_website:
+    field_website_uri: uri_anonymizer
+    field_website_title: text_anonymizer
+  users_field_data:
+    name: username_anonymizer
+    pass: password_anonymizer
+    mail: email_anonymizer
+    init: email_anonymizer
+empty_tables: {  }

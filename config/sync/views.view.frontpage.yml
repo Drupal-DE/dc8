@@ -66,7 +66,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Anwenden
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -292,7 +292,7 @@ display:
       path: node
       display_extenders: {  }
     display_plugin: page
-    display_title: Page
+    display_title: Seite
     id: page_1
     position: 1
     cache_metadata:
