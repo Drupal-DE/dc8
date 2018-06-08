@@ -112,6 +112,7 @@
         "drupal/field_group": "dev-1.x",
         "drupal/flag": "dev-4.x",
         "drupal/focal_point": "dev-1.x",
+        "drupal/gdpr": "^1.0@alpha",
         "drupal/inline_entity_form": "^1.0",
         "drupal/media_entity": "dev-2.x",
         "drupal/media_entity_actions": "^1.0@alpha",
